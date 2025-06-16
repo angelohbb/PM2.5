@@ -1,0 +1,698 @@
+"","country","year_of_statistics","Premature_deaths","region","average_pm25"
+"1","European Union - 27 countries (from 2020)",2005,"431202",NA,NA
+"2","European Union - 27 countries (from 2020)",2007,"349335",NA,NA
+"3","European Union - 27 countries (from 2020)",2008,"354004",NA,NA
+"4","European Union - 27 countries (from 2020)",2009,"362672",NA,NA
+"5","European Union - 27 countries (from 2020)",2010,"367509",NA,NA
+"6","European Union - 27 countries (from 2020)",2011,"391884",NA,NA
+"7","European Union - 27 countries (from 2020)",2012,"343480",NA,NA
+"8","European Union - 27 countries (from 2020)",2013,"328781",NA,NA
+"9","European Union - 27 countries (from 2020)",2014,"291671",NA,NA
+"10","European Union - 27 countries (from 2020)",2015,"322139",NA,NA
+"11","European Union - 27 countries (from 2020)",2016,"283047",NA,NA
+"12","European Union - 27 countries (from 2020)",2017,"304667",NA,NA
+"13","European Union - 27 countries (from 2020)",2018,"291931",NA,NA
+"14","European Union - 27 countries (from 2020)",2019,"231973",NA,NA
+"15","European Union - 27 countries (from 2020)",2020,"238582",NA,NA
+"16","European Union - 27 countries (from 2020)",2021,"254867",NA,NA
+"17","European Union - 27 countries (from 2020)",2022,"239086",NA,NA
+"18","European Union - 28 countries (2013-2020)",2005,":",NA,NA
+"19","European Union - 28 countries (2013-2020)",2007,":",NA,NA
+"20","European Union - 28 countries (2013-2020)",2008,":",NA,NA
+"21","European Union - 28 countries (2013-2020)",2009,":",NA,NA
+"22","European Union - 28 countries (2013-2020)",2010,":",NA,NA
+"23","European Union - 28 countries (2013-2020)",2011,":",NA,NA
+"24","European Union - 28 countries (2013-2020)",2012,":",NA,NA
+"25","European Union - 28 countries (2013-2020)",2013,":",NA,NA
+"26","European Union - 28 countries (2013-2020)",2014,":",NA,NA
+"27","European Union - 28 countries (2013-2020)",2015,":",NA,NA
+"28","European Union - 28 countries (2013-2020)",2016,":",NA,NA
+"29","European Union - 28 countries (2013-2020)",2017,":",NA,NA
+"30","European Union - 28 countries (2013-2020)",2018,":",NA,NA
+"31","European Union - 28 countries (2013-2020)",2019,":",NA,NA
+"32","European Union - 28 countries (2013-2020)",2020,":",NA,NA
+"33","European Union - 28 countries (2013-2020)",2021,":",NA,NA
+"34","European Union - 28 countries (2013-2020)",2022,":",NA,NA
+"35","Belgium",2005,"9333",NA,NA
+"36","Belgium",2007,"7197",NA,NA
+"37","Belgium",2008,"8628",NA,NA
+"38","Belgium",2009,"9500",NA,NA
+"39","Belgium",2010,"9829",NA,NA
+"40","Belgium",2011,"9064",NA,NA
+"41","Belgium",2012,"8132",NA,NA
+"42","Belgium",2013,"8690",NA,NA
+"43","Belgium",2014,"6256",NA,NA
+"44","Belgium",2015,"6214",NA,NA
+"45","Belgium",2016,"5775",NA,NA
+"46","Belgium",2017,"5679",NA,NA
+"47","Belgium",2018,"5917","West",12.995447761194
+"48","Belgium",2019,"4537","West",11.3608676470588
+"49","Belgium",2020,"3930","West",9.6108
+"50","Belgium",2021,"4469","West",10.9348142857143
+"51","Belgium",2022,"4147","West",10.4107283950617
+"52","Bulgaria",2005,"19288",NA,NA
+"53","Bulgaria",2007,"17315",NA,NA
+"54","Bulgaria",2008,"19064",NA,NA
+"55","Bulgaria",2009,"16173",NA,NA
+"56","Bulgaria",2010,"15923",NA,NA
+"57","Bulgaria",2011,"20014",NA,NA
+"58","Bulgaria",2012,"16041",NA,NA
+"59","Bulgaria",2013,"13770",NA,NA
+"60","Bulgaria",2014,"14467",NA,NA
+"61","Bulgaria",2015,"15036",NA,NA
+"62","Bulgaria",2016,"13748",NA,NA
+"63","Bulgaria",2017,"13611",NA,NA
+"64","Bulgaria",2018,"12552","East",19.5862857142857
+"65","Bulgaria",2019,"10413","East",16.538
+"66","Bulgaria",2020,"11243","East",14.6821666666667
+"67","Bulgaria",2021,"11482","East",13.7155
+"68","Bulgaria",2022,"9003","East",13.996
+"69","Czechia",2005,"13121",NA,NA
+"70","Czechia",2007,"8613",NA,NA
+"71","Czechia",2008,"9119",NA,NA
+"72","Czechia",2009,"10233",NA,NA
+"73","Czechia",2010,"11846",NA,NA
+"74","Czechia",2011,"11180",NA,NA
+"75","Czechia",2012,"10216",NA,NA
+"76","Czechia",2013,"10922",NA,NA
+"77","Czechia",2014,"9858",NA,NA
+"78","Czechia",2015,"9250",NA,NA
+"79","Czechia",2016,"8638",NA,NA
+"80","Czechia",2017,"9336",NA,NA
+"81","Czechia",2018,"10312",NA,NA
+"82","Czechia",2019,"6947",NA,NA
+"83","Czechia",2020,"6903",NA,NA
+"84","Czechia",2021,"8489",NA,NA
+"85","Czechia",2022,"6884",NA,NA
+"86","Denmark",2005,"2994",NA,NA
+"87","Denmark",2007,"2741",NA,NA
+"88","Denmark",2008,"2416",NA,NA
+"89","Denmark",2009,"2335",NA,NA
+"90","Denmark",2010,"2580",NA,NA
+"91","Denmark",2011,"3388",NA,NA
+"92","Denmark",2012,"1918",NA,NA
+"93","Denmark",2013,"1764",NA,NA
+"94","Denmark",2014,"2422",NA,NA
+"95","Denmark",2015,"1845",NA,NA
+"96","Denmark",2016,"1652",NA,NA
+"97","Denmark",2017,"1367",NA,NA
+"98","Denmark",2018,"2204",NA,NA
+"99","Denmark",2019,"1720",NA,NA
+"100","Denmark",2020,"1041",NA,NA
+"101","Denmark",2021,"1256",NA,NA
+"102","Denmark",2022,"1195",NA,NA
+"103","Germany",2005,"66678",NA,NA
+"104","Germany",2007,"48899",NA,NA
+"105","Germany",2008,"54721",NA,NA
+"106","Germany",2009,"63395",NA,NA
+"107","Germany",2010,"68740",NA,NA
+"108","Germany",2011,"64513",NA,NA
+"109","Germany",2012,"51724",NA,NA
+"110","Germany",2013,"58421",NA,NA
+"111","Germany",2014,"52069",NA,NA
+"112","Germany",2015,"49729",NA,NA
+"113","Germany",2016,"44221",NA,NA
+"114","Germany",2017,"45212",NA,NA
+"115","Germany",2018,"49311","West",12.7907114427861
+"116","Germany",2019,"34375","West",10.5508357487923
+"117","Germany",2020,"28926","West",9.31781739130435
+"118","Germany",2021,"32356","West",9.65775735294118
+"119","Germany",2022,"32628","West",9.5454668989547
+"120","Estonia",2005,"776",NA,NA
+"121","Estonia",2007,"633",NA,NA
+"122","Estonia",2008,"454",NA,NA
+"123","Estonia",2009,"277",NA,NA
+"124","Estonia",2010,"445",NA,NA
+"125","Estonia",2011,"347",NA,NA
+"126","Estonia",2012,"323",NA,NA
+"127","Estonia",2013,"306",NA,NA
+"128","Estonia",2014,"401",NA,NA
+"129","Estonia",2015,"214",NA,NA
+"130","Estonia",2016,"129",NA,NA
+"131","Estonia",2017,"72",NA,NA
+"132","Estonia",2018,"231","East",6.09385714285714
+"133","Estonia",2019,"80","East",4.68542857142857
+"134","Estonia",2020,"59","East",4.37757142857143
+"135","Estonia",2021,"114","East",4.9254
+"136","Estonia",2022,"87","East",4.66585714285714
+"137","Ireland",2005,"644",NA,NA
+"138","Ireland",2007,"325",NA,NA
+"139","Ireland",2008,"832",NA,NA
+"140","Ireland",2009,"737",NA,NA
+"141","Ireland",2010,"1009",NA,NA
+"142","Ireland",2011,"770",NA,NA
+"143","Ireland",2012,"642",NA,NA
+"144","Ireland",2013,"880",NA,NA
+"145","Ireland",2014,"816",NA,NA
+"146","Ireland",2015,"392",NA,NA
+"147","Ireland",2016,"466",NA,NA
+"148","Ireland",2017,"277",NA,NA
+"149","Ireland",2018,"625","West",7.99655555555556
+"150","Ireland",2019,"597","West",9.06444444444444
+"151","Ireland",2020,"489","West",8.35783870967742
+"152","Ireland",2021,"487","West",8.36923529411765
+"153","Ireland",2022,"527","West",8.26110638297872
+"154","Greece",2005,"15315",NA,NA
+"155","Greece",2007,"12577",NA,NA
+"156","Greece",2008,"13202",NA,NA
+"157","Greece",2009,"13421",NA,NA
+"158","Greece",2010,"11990",NA,NA
+"159","Greece",2011,"13003",NA,NA
+"160","Greece",2012,"12276",NA,NA
+"161","Greece",2013,"11479",NA,NA
+"162","Greece",2014,"9651",NA,NA
+"163","Greece",2015,"12502",NA,NA
+"164","Greece",2016,"12169",NA,NA
+"165","Greece",2017,"20695",NA,NA
+"166","Greece",2018,"11151",NA,NA
+"167","Greece",2019,"9480",NA,NA
+"168","Greece",2020,"8813",NA,NA
+"169","Greece",2021,"11026",NA,NA
+"170","Greece",2022,"10729",NA,NA
+"171","Spain",2005,"34031",NA,NA
+"172","Spain",2007,"31439",NA,NA
+"173","Spain",2008,"24590",NA,NA
+"174","Spain",2009,"24482",NA,NA
+"175","Spain",2010,"19199",NA,NA
+"176","Spain",2011,"20928",NA,NA
+"177","Spain",2012,"20396",NA,NA
+"178","Spain",2013,"15816",NA,NA
+"179","Spain",2014,"15454",NA,NA
+"180","Spain",2015,"22199",NA,NA
+"181","Spain",2016,"17515",NA,NA
+"182","Spain",2017,"20152",NA,NA
+"183","Spain",2018,"15124",NA,NA
+"184","Spain",2019,"14745",NA,NA
+"185","Spain",2020,"16994",NA,NA
+"186","Spain",2021,"14088",NA,NA
+"187","Spain",2022,"18549",NA,NA
+"188","France",2005,"38735",NA,NA
+"189","France",2007,"32812",NA,NA
+"190","France",2008,"34929",NA,NA
+"191","France",2009,"39699",NA,NA
+"192","France",2010,"40526",NA,NA
+"193","France",2011,"40048",NA,NA
+"194","France",2012,"36665",NA,NA
+"195","France",2013,"35682",NA,NA
+"196","France",2014,"22700",NA,NA
+"197","France",2015,"28192",NA,NA
+"198","France",2016,"24435",NA,NA
+"199","France",2017,"22995",NA,NA
+"200","France",2018,"22902","West",10.4509659863946
+"201","France",2019,"18697","West",9.47237662337662
+"202","France",2020,"16476","West",8.60538150289017
+"203","France",2021,"19704","West",9.34583597883598
+"204","France",2022,"20683","West",9.55549261083744
+"205","Croatia",2005,"6542",NA,NA
+"206","Croatia",2007,"5256",NA,NA
+"207","Croatia",2008,"4912",NA,NA
+"208","Croatia",2009,"5375",NA,NA
+"209","Croatia",2010,"5435",NA,NA
+"210","Croatia",2011,"5907",NA,NA
+"211","Croatia",2012,"4254",NA,NA
+"212","Croatia",2013,"4127",NA,NA
+"213","Croatia",2014,"3796",NA,NA
+"214","Croatia",2015,"4714",NA,NA
+"215","Croatia",2016,"5199",NA,NA
+"216","Croatia",2017,"4753",NA,NA
+"217","Croatia",2018,"4804",NA,NA
+"218","Croatia",2019,"3563",NA,NA
+"219","Croatia",2020,"4260",NA,NA
+"220","Croatia",2021,"4369",NA,NA
+"221","Croatia",2022,"3813",NA,NA
+"222","Italy",2005,"71867",NA,NA
+"223","Italy",2007,"60498",NA,NA
+"224","Italy",2008,"58572",NA,NA
+"225","Italy",2009,"58013",NA,NA
+"226","Italy",2010,"51817",NA,NA
+"227","Italy",2011,"65837",NA,NA
+"228","Italy",2012,"59739",NA,NA
+"229","Italy",2013,"54592",NA,NA
+"230","Italy",2014,"46040",NA,NA
+"231","Italy",2015,"61503",NA,NA
+"232","Italy",2016,"50044",NA,NA
+"233","Italy",2017,"55162",NA,NA
+"234","Italy",2018,"47316",NA,NA
+"235","Italy",2019,"42679",NA,NA
+"236","Italy",2020,"52312",NA,NA
+"237","Italy",2021,"44461",NA,NA
+"238","Italy",2022,"48606",NA,NA
+"239","Cyprus",2005,"1136",NA,NA
+"240","Cyprus",2007,"884",NA,NA
+"241","Cyprus",2008,"963",NA,NA
+"242","Cyprus",2009,"753",NA,NA
+"243","Cyprus",2010,"792",NA,NA
+"244","Cyprus",2011,"931",NA,NA
+"245","Cyprus",2012,"1070",NA,NA
+"246","Cyprus",2013,"589",NA,NA
+"247","Cyprus",2014,"620",NA,NA
+"248","Cyprus",2015,"709",NA,NA
+"249","Cyprus",2016,"541",NA,NA
+"250","Cyprus",2017,"620",NA,NA
+"251","Cyprus",2018,"527",NA,NA
+"252","Cyprus",2019,"583",NA,NA
+"253","Cyprus",2020,"564",NA,NA
+"254","Cyprus",2021,"629",NA,NA
+"255","Cyprus",2022,"693",NA,NA
+"256","Latvia",2005,"2639",NA,NA
+"257","Latvia",2007,"1616",NA,NA
+"258","Latvia",2008,"2400",NA,NA
+"259","Latvia",2009,"1690",NA,NA
+"260","Latvia",2010,"2044",NA,NA
+"261","Latvia",2011,"1427",NA,NA
+"262","Latvia",2012,"1526",NA,NA
+"263","Latvia",2013,"1553",NA,NA
+"264","Latvia",2014,"1783",NA,NA
+"265","Latvia",2015,"1247",NA,NA
+"266","Latvia",2016,"1241",NA,NA
+"267","Latvia",2017,"898",NA,NA
+"268","Latvia",2018,"1434","East",14.1684
+"269","Latvia",2019,"1002","East",11.433
+"270","Latvia",2020,"836","East",10.9822
+"271","Latvia",2021,"1405","East",13.55325
+"272","Latvia",2022,"822","East",9.3974
+"273","Lithuania",2005,"3224",NA,NA
+"274","Lithuania",2007,"2632",NA,NA
+"275","Lithuania",2008,"3030",NA,NA
+"276","Lithuania",2009,"2157",NA,NA
+"277","Lithuania",2010,"3158",NA,NA
+"278","Lithuania",2011,"2574",NA,NA
+"279","Lithuania",2012,"2257",NA,NA
+"280","Lithuania",2013,"2477",NA,NA
+"281","Lithuania",2014,"2791",NA,NA
+"282","Lithuania",2015,"2086",NA,NA
+"283","Lithuania",2016,"2027",NA,NA
+"284","Lithuania",2017,"1463",NA,NA
+"285","Lithuania",2018,"2079","East",12.8505714285714
+"286","Lithuania",2019,"1860","East",12.3624285714286
+"287","Lithuania",2020,"1454","East",8.822
+"288","Lithuania",2021,"2138","East",10.027
+"289","Lithuania",2022,"1472","East",8.779625
+"290","Luxembourg",2005,"261",NA,NA
+"291","Luxembourg",2007,"207",NA,NA
+"292","Luxembourg",2008,"235",NA,NA
+"293","Luxembourg",2009,"279",NA,NA
+"294","Luxembourg",2010,"278",NA,NA
+"295","Luxembourg",2011,"238",NA,NA
+"296","Luxembourg",2012,"207",NA,NA
+"297","Luxembourg",2013,"241",NA,NA
+"298","Luxembourg",2014,"182",NA,NA
+"299","Luxembourg",2015,"201",NA,NA
+"300","Luxembourg",2016,"175",NA,NA
+"301","Luxembourg",2017,"149",NA,NA
+"302","Luxembourg",2018,"149","West",9.07025
+"303","Luxembourg",2019,"94","West",7.8805
+"304","Luxembourg",2020,"74","West",7.1435
+"305","Luxembourg",2021,"77","West",7.1165
+"306","Luxembourg",2022,"75","West",7.739
+"307","Hungary",2005,"18008",NA,NA
+"308","Hungary",2007,"13054",NA,NA
+"309","Hungary",2008,"12961",NA,NA
+"310","Hungary",2009,"13498",NA,NA
+"311","Hungary",2010,"13702",NA,NA
+"312","Hungary",2011,"16364",NA,NA
+"313","Hungary",2012,"12509",NA,NA
+"314","Hungary",2013,"11577",NA,NA
+"315","Hungary",2014,"10763",NA,NA
+"316","Hungary",2015,"13034",NA,NA
+"317","Hungary",2016,"11298",NA,NA
+"318","Hungary",2017,"12620",NA,NA
+"319","Hungary",2018,"12171","East",18.578
+"320","Hungary",2019,"8672","East",14.752125
+"321","Hungary",2020,"9504","East",13.3259090909091
+"322","Hungary",2021,"10393","East",14.7845833333333
+"323","Hungary",2022,"8573","East",13.5728571428571
+"324","Malta",2005,"351",NA,NA
+"325","Malta",2007,"271",NA,NA
+"326","Malta",2008,"227",NA,NA
+"327","Malta",2009,"260",NA,NA
+"328","Malta",2010,"188",NA,NA
+"329","Malta",2011,"243",NA,NA
+"330","Malta",2012,"181",NA,NA
+"331","Malta",2013,"173",NA,NA
+"332","Malta",2014,"162",NA,NA
+"333","Malta",2015,"199",NA,NA
+"334","Malta",2016,"150",NA,NA
+"335","Malta",2017,"173",NA,NA
+"336","Malta",2018,"196",NA,NA
+"337","Malta",2019,"190",NA,NA
+"338","Malta",2020,"151",NA,NA
+"339","Malta",2021,"196",NA,NA
+"340","Malta",2022,"173",NA,NA
+"341","Netherlands",2005,"11988",NA,NA
+"342","Netherlands",2007,"10169",NA,NA
+"343","Netherlands",2008,"11278",NA,NA
+"344","Netherlands",2009,"11239",NA,NA
+"345","Netherlands",2010,"11897",NA,NA
+"346","Netherlands",2011,"11675",NA,NA
+"347","Netherlands",2012,"8649",NA,NA
+"348","Netherlands",2013,"9198",NA,NA
+"349","Netherlands",2014,"8603",NA,NA
+"350","Netherlands",2015,"7682",NA,NA
+"351","Netherlands",2016,"6645",NA,NA
+"352","Netherlands",2017,"6702",NA,NA
+"353","Netherlands",2018,"7563","West",12.4428444444444
+"354","Netherlands",2019,"6063","West",10.9171333333333
+"355","Netherlands",2020,"4976","West",9.25469565217391
+"356","Netherlands",2021,"5700","West",9.60912765957447
+"357","Netherlands",2022,"5254","West",9.49339130434783
+"358","Austria",2005,"7167",NA,NA
+"359","Austria",2007,"5416",NA,NA
+"360","Austria",2008,"5921",NA,NA
+"361","Austria",2009,"5826",NA,NA
+"362","Austria",2010,"6737",NA,NA
+"363","Austria",2011,"6720",NA,NA
+"364","Austria",2012,"5391",NA,NA
+"365","Austria",2013,"5856",NA,NA
+"366","Austria",2014,"4289",NA,NA
+"367","Austria",2015,"4901",NA,NA
+"368","Austria",2016,"3961",NA,NA
+"369","Austria",2017,"4234",NA,NA
+"370","Austria",2018,"5007","West",14.1077954545455
+"371","Austria",2019,"3682","West",11.6547115384615
+"372","Austria",2020,"3168","West",10.206298245614
+"373","Austria",2021,"3204","West",10.6510327868852
+"374","Austria",2022,"3321","West",10.5354852941176
+"375","Poland",2005,"42174",NA,NA
+"376","Poland",2007,"36094",NA,NA
+"377","Poland",2008,"40404",NA,NA
+"378","Poland",2009,"42377",NA,NA
+"379","Poland",2010,"52661",NA,NA
+"380","Poland",2011,"50128",NA,NA
+"381","Poland",2012,"47721",NA,NA
+"382","Poland",2013,"45917",NA,NA
+"383","Poland",2014,"45153",NA,NA
+"384","Poland",2015,"44506",NA,NA
+"385","Poland",2016,"41588",NA,NA
+"386","Poland",2017,"44862",NA,NA
+"387","Poland",2018,"46823","East",23.5554526315789
+"388","Poland",2019,"35675","East",18.9565135135135
+"389","Poland",2020,"36562","East",16.9173658536585
+"390","Poland",2021,"47335","East",19.1697615384615
+"391","Poland",2022,"34719","East",16.6236315789474
+"392","Portugal",2005,"9168",NA,NA
+"393","Portugal",2007,"6282",NA,NA
+"394","Portugal",2008,"4293",NA,NA
+"395","Portugal",2009,"5217",NA,NA
+"396","Portugal",2010,"4074",NA,NA
+"397","Portugal",2011,"4870",NA,NA
+"398","Portugal",2012,"3682",NA,NA
+"399","Portugal",2013,"3653",NA,NA
+"400","Portugal",2014,"2620",NA,NA
+"401","Portugal",2015,"3942",NA,NA
+"402","Portugal",2016,"2912",NA,NA
+"403","Portugal",2017,"3041",NA,NA
+"404","Portugal",2018,"2640",NA,NA
+"405","Portugal",2019,"2517",NA,NA
+"406","Portugal",2020,"2641",NA,NA
+"407","Portugal",2021,"2129",NA,NA
+"408","Portugal",2022,"3639",NA,NA
+"409","Romania",2005,"42331",NA,NA
+"410","Romania",2007,"33137",NA,NA
+"411","Romania",2008,"30316",NA,NA
+"412","Romania",2009,"26399",NA,NA
+"413","Romania",2010,"21934",NA,NA
+"414","Romania",2011,"29354",NA,NA
+"415","Romania",2012,"28368",NA,NA
+"416","Romania",2013,"23046",NA,NA
+"417","Romania",2014,"22053",NA,NA
+"418","Romania",2015,"24011",NA,NA
+"419","Romania",2016,"21597",NA,NA
+"420","Romania",2017,"23484",NA,NA
+"421","Romania",2018,"23168","East",18.6105714285714
+"422","Romania",2019,"18481","East",16.132
+"423","Romania",2020,"21601","East",14.1303636363636
+"424","Romania",2021,"22086","East",14.6456153846154
+"425","Romania",2022,"17949","East",14.1681176470588
+"426","Slovenia",2005,"2035",NA,NA
+"427","Slovenia",2007,"1558",NA,NA
+"428","Slovenia",2008,"1563",NA,NA
+"429","Slovenia",2009,"1698",NA,NA
+"430","Slovenia",2010,"1717",NA,NA
+"431","Slovenia",2011,"1954",NA,NA
+"432","Slovenia",2012,"1632",NA,NA
+"433","Slovenia",2013,"1605",NA,NA
+"434","Slovenia",2014,"1306",NA,NA
+"435","Slovenia",2015,"1657",NA,NA
+"436","Slovenia",2016,"1470",NA,NA
+"437","Slovenia",2017,"1556",NA,NA
+"438","Slovenia",2018,"1498","East",15.37
+"439","Slovenia",2019,"1144","East",12.45275
+"440","Slovenia",2020,"1236","East",14.622
+"441","Slovenia",2021,"1137","East",12.2976
+"442","Slovenia",2022,"1278","East",15.396
+"443","Slovakia",2005,"6700",NA,NA
+"444","Slovakia",2007,"5344",NA,NA
+"445","Slovakia",2008,"5544",NA,NA
+"446","Slovakia",2009,"5337",NA,NA
+"447","Slovakia",2010,"5882",NA,NA
+"448","Slovakia",2011,"6771",NA,NA
+"449","Slovakia",2012,"5580",NA,NA
+"450","Slovakia",2013,"5281",NA,NA
+"451","Slovakia",2014,"4877",NA,NA
+"452","Slovakia",2015,"5131",NA,NA
+"453","Slovakia",2016,"4473",NA,NA
+"454","Slovakia",2017,"5032",NA,NA
+"455","Slovakia",2018,"4857","East",17.99575
+"456","Slovakia",2019,"3465","East",15.4065625
+"457","Slovakia",2020,"3920","East",14.6324242424242
+"458","Slovakia",2021,"5359","East",16.0808648648649
+"459","Slovakia",2022,"3710","East",14.8501304347826
+"460","Finland",2005,"1242",NA,NA
+"461","Finland",2007,"1261",NA,NA
+"462","Finland",2008,"846",NA,NA
+"463","Finland",2009,"629",NA,NA
+"464","Finland",2010,"1010",NA,NA
+"465","Finland",2011,"954",NA,NA
+"466","Finland",2012,"774",NA,NA
+"467","Finland",2013,"369",NA,NA
+"468","Finland",2014,"883",NA,NA
+"469","Finland",2015,"229",NA,NA
+"470","Finland",2016,"228",NA,NA
+"471","Finland",2017,"98",NA,NA
+"472","Finland",2018,"455",NA,NA
+"473","Finland",2019,"171",NA,NA
+"474","Finland",2020,"63",NA,NA
+"475","Finland",2021,"162",NA,NA
+"476","Finland",2022,"68",NA,NA
+"477","Sweden",2005,"3442",NA,NA
+"478","Sweden",2007,"3093",NA,NA
+"479","Sweden",2008,"2570",NA,NA
+"480","Sweden",2009,"1660",NA,NA
+"481","Sweden",2010,"2084",NA,NA
+"482","Sweden",2011,"2668",NA,NA
+"483","Sweden",2012,"1597",NA,NA
+"484","Sweden",2013,"785",NA,NA
+"485","Sweden",2014,"1644",NA,NA
+"486","Sweden",2015,"799",NA,NA
+"487","Sweden",2016,"737",NA,NA
+"488","Sweden",2017,"412",NA,NA
+"489","Sweden",2018,"902",NA,NA
+"490","Sweden",2019,"532",NA,NA
+"491","Sweden",2020,"370",NA,NA
+"492","Sweden",2021,"604",NA,NA
+"493","Sweden",2022,"476",NA,NA
+"494","Iceland",2005,"31",NA,NA
+"495","Iceland",2007,"26",NA,NA
+"496","Iceland",2008,"48",NA,NA
+"497","Iceland",2009,"18",NA,NA
+"498","Iceland",2010,"36",NA,NA
+"499","Iceland",2011,"4",NA,NA
+"500","Iceland",2012,"0",NA,NA
+"501","Iceland",2013,"24",NA,NA
+"502","Iceland",2014,"25",NA,NA
+"503","Iceland",2015,"21",NA,NA
+"504","Iceland",2016,"11",NA,NA
+"505","Iceland",2017,"14",NA,NA
+"506","Iceland",2018,"7",NA,NA
+"507","Iceland",2019,"2",NA,NA
+"508","Iceland",2020,"0",NA,NA
+"509","Iceland",2021,"1",NA,NA
+"510","Iceland",2022,"0",NA,NA
+"511","Liechtenstein",2005,"27",NA,NA
+"512","Liechtenstein",2007,"20",NA,NA
+"513","Liechtenstein",2008,"22",NA,NA
+"514","Liechtenstein",2009,"18",NA,NA
+"515","Liechtenstein",2010,"23",NA,NA
+"516","Liechtenstein",2011,"20",NA,NA
+"517","Liechtenstein",2012,"10",NA,NA
+"518","Liechtenstein",2013,"13",NA,NA
+"519","Liechtenstein",2014,"8",NA,NA
+"520","Liechtenstein",2015,"12",NA,NA
+"521","Liechtenstein",2016,"10",NA,NA
+"522","Liechtenstein",2017,"9",NA,NA
+"523","Liechtenstein",2018,"8",NA,NA
+"524","Liechtenstein",2019,"6",NA,NA
+"525","Liechtenstein",2020,"7",NA,NA
+"526","Liechtenstein",2021,"7",NA,NA
+"527","Liechtenstein",2022,"7",NA,NA
+"528","Norway",2005,"1324",NA,NA
+"529","Norway",2007,"1187",NA,NA
+"530","Norway",2008,"1005",NA,NA
+"531","Norway",2009,"833",NA,NA
+"532","Norway",2010,"1292",NA,NA
+"533","Norway",2011,"1283",NA,NA
+"534","Norway",2012,"868",NA,NA
+"535","Norway",2013,"768",NA,NA
+"536","Norway",2014,"695",NA,NA
+"537","Norway",2015,"427",NA,NA
+"538","Norway",2016,"450",NA,NA
+"539","Norway",2017,"296",NA,NA
+"540","Norway",2018,"555",NA,NA
+"541","Norway",2019,"319",NA,NA
+"542","Norway",2020,"157",NA,NA
+"543","Norway",2021,"406",NA,NA
+"544","Norway",2022,"347",NA,NA
+"545","Switzerland",2005,"4698",NA,NA
+"546","Switzerland",2007,"3773",NA,NA
+"547","Switzerland",2008,"4187",NA,NA
+"548","Switzerland",2009,"4122",NA,NA
+"549","Switzerland",2010,"4579",NA,NA
+"550","Switzerland",2011,"4203",NA,NA
+"551","Switzerland",2012,"3412",NA,NA
+"552","Switzerland",2013,"3979",NA,NA
+"553","Switzerland",2014,"2929",NA,NA
+"554","Switzerland",2015,"3306",NA,NA
+"555","Switzerland",2016,"2356",NA,NA
+"556","Switzerland",2017,"2312",NA,NA
+"557","Switzerland",2018,"2260",NA,NA
+"558","Switzerland",2019,"1792",NA,NA
+"559","Switzerland",2020,"1722",NA,NA
+"560","Switzerland",2021,"1684",NA,NA
+"561","Switzerland",2022,"1902",NA,NA
+"562","United Kingdom",2005,":",NA,NA
+"563","United Kingdom",2007,":",NA,NA
+"564","United Kingdom",2008,":",NA,NA
+"565","United Kingdom",2009,":",NA,NA
+"566","United Kingdom",2010,":",NA,NA
+"567","United Kingdom",2011,":",NA,NA
+"568","United Kingdom",2012,":",NA,NA
+"569","United Kingdom",2013,":",NA,NA
+"570","United Kingdom",2014,":",NA,NA
+"571","United Kingdom",2015,":",NA,NA
+"572","United Kingdom",2016,":",NA,NA
+"573","United Kingdom",2017,":",NA,NA
+"574","United Kingdom",2018,":",NA,NA
+"575","United Kingdom",2019,":",NA,NA
+"576","United Kingdom",2020,":",NA,NA
+"577","United Kingdom",2021,":",NA,NA
+"578","United Kingdom",2022,":",NA,NA
+"579","Bosnia and Herzegovina",2005,"7699",NA,NA
+"580","Bosnia and Herzegovina",2007,"6313",NA,NA
+"581","Bosnia and Herzegovina",2008,"5910",NA,NA
+"582","Bosnia and Herzegovina",2009,"7000",NA,NA
+"583","Bosnia and Herzegovina",2010,"6772",NA,NA
+"584","Bosnia and Herzegovina",2011,"7314",NA,NA
+"585","Bosnia and Herzegovina",2012,"5338",NA,NA
+"586","Bosnia and Herzegovina",2013,"4165",NA,NA
+"587","Bosnia and Herzegovina",2014,"3957",NA,NA
+"588","Bosnia and Herzegovina",2015,"5351",NA,NA
+"589","Bosnia and Herzegovina",2016,"7477",NA,NA
+"590","Bosnia and Herzegovina",2017,"6219",NA,NA
+"591","Bosnia and Herzegovina",2018,"7313",NA,NA
+"592","Bosnia and Herzegovina",2019,"5797",NA,NA
+"593","Bosnia and Herzegovina",2020,"9159",NA,NA
+"594","Bosnia and Herzegovina",2021,"8986",NA,NA
+"595","Bosnia and Herzegovina",2022,"6212",NA,NA
+"596","Montenegro",2005,"1031",NA,NA
+"597","Montenegro",2007,"1018",NA,NA
+"598","Montenegro",2008,"929",NA,NA
+"599","Montenegro",2009,"965",NA,NA
+"600","Montenegro",2010,"1265",NA,NA
+"601","Montenegro",2011,"1254",NA,NA
+"602","Montenegro",2012,"898",NA,NA
+"603","Montenegro",2013,"737",NA,NA
+"604","Montenegro",2014,"666",NA,NA
+"605","Montenegro",2015,"879",NA,NA
+"606","Montenegro",2016,"962",NA,NA
+"607","Montenegro",2017,"875",NA,NA
+"608","Montenegro",2018,"975",NA,NA
+"609","Montenegro",2019,"856",NA,NA
+"610","Montenegro",2020,"920",NA,NA
+"611","Montenegro",2021,"1079",NA,NA
+"612","Montenegro",2022,"712",NA,NA
+"613","North Macedonia",2005,"6303",NA,NA
+"614","North Macedonia",2007,"4173",NA,NA
+"615","North Macedonia",2008,"4236",NA,NA
+"616","North Macedonia",2009,"5315",NA,NA
+"617","North Macedonia",2010,"4973",NA,NA
+"618","North Macedonia",2011,"5676",NA,NA
+"619","North Macedonia",2012,"5269",NA,NA
+"620","North Macedonia",2013,"4892",NA,NA
+"621","North Macedonia",2014,"4442",NA,NA
+"622","North Macedonia",2015,"4856",NA,NA
+"623","North Macedonia",2016,"6048",NA,NA
+"624","North Macedonia",2017,"6174",NA,NA
+"625","North Macedonia",2018,"5124",NA,NA
+"626","North Macedonia",2019,"3278",NA,NA
+"627","North Macedonia",2020,"3758",NA,NA
+"628","North Macedonia",2021,"4980",NA,NA
+"629","North Macedonia",2022,"3636",NA,NA
+"630","Albania",2005,"6513",NA,NA
+"631","Albania",2007,"4900",NA,NA
+"632","Albania",2008,"4372",NA,NA
+"633","Albania",2009,"5197",NA,NA
+"634","Albania",2010,"6244",NA,NA
+"635","Albania",2011,"5702",NA,NA
+"636","Albania",2012,"4944",NA,NA
+"637","Albania",2013,"4297",NA,NA
+"638","Albania",2014,"3333",NA,NA
+"639","Albania",2015,"4660",NA,NA
+"640","Albania",2016,"5138",NA,NA
+"641","Albania",2017,"5280",NA,NA
+"642","Albania",2018,"4781",NA,NA
+"643","Albania",2019,"3664",NA,NA
+"644","Albania",2020,"3648",NA,NA
+"645","Albania",2021,"4605",NA,NA
+"646","Albania",2022,"3458",NA,NA
+"647","Serbia",2005,"18330",NA,NA
+"648","Serbia",2007,"14776",NA,NA
+"649","Serbia",2008,"14908",NA,NA
+"650","Serbia",2009,"15083",NA,NA
+"651","Serbia",2010,"11877",NA,NA
+"652","Serbia",2011,"17520",NA,NA
+"653","Serbia",2012,"13373",NA,NA
+"654","Serbia",2013,"11205",NA,NA
+"655","Serbia",2014,"11554",NA,NA
+"656","Serbia",2015,"13180",NA,NA
+"657","Serbia",2016,"13759",NA,NA
+"658","Serbia",2017,"16205",NA,NA
+"659","Serbia",2018,"14716",NA,NA
+"660","Serbia",2019,"11130",NA,NA
+"661","Serbia",2020,"14381",NA,NA
+"662","Serbia",2021,"14850",NA,NA
+"663","Serbia",2022,"10799",NA,NA
+"664","Kosovo*",2005,"4970",NA,NA
+"665","Kosovo*",2007,"4249",NA,NA
+"666","Kosovo*",2008,"4226",NA,NA
+"667","Kosovo*",2009,"4684",NA,NA
+"668","Kosovo*",2010,"5298",NA,NA
+"669","Kosovo*",2011,"4683",NA,NA
+"670","Kosovo*",2012,"4158",NA,NA
+"671","Kosovo*",2013,"3937",NA,NA
+"672","Kosovo*",2014,"3745",NA,NA
+"673","Kosovo*",2015,"3961",NA,NA
+"674","Kosovo*",2016,"4039",NA,NA
+"675","Kosovo*",2017,"4180",NA,NA
+"676","Kosovo*",2018,"4097",NA,NA
+"677","Kosovo*",2019,"2759",NA,NA
+"678","Kosovo*",2020,"3059",NA,NA
+"679","Kosovo*",2021,"2925",NA,NA
+"680","Kosovo*",2022,"2372",NA,NA
+"681",":",2005,"not available",NA,NA
+"682","Bulgaria",2023,NA,"East",14.10125
+"683","Estonia",2023,NA,"East",4.53542857142857
+"684","Hungary",2023,NA,"East",12.2233333333333
+"685","Latvia",2023,NA,"East",8.8218
+"686","Lithuania",2023,NA,"East",7.47857142857143
+"687","Poland",2023,NA,"East",14.5346444444444
+"688","Romania",2023,NA,"East",14.7094666666667
+"689","Slovakia",2023,NA,"East",13.2966170212766
+"690","Slovenia",2023,NA,"East",14.0272222222222
+"691","Austria",2023,NA,"West",9.36018461538461
+"692","Belgium",2023,NA,"West",9.06546341463415
+"693","France",2023,NA,"West",8.57674666666667
+"694","Germany",2023,NA,"West",8.17179411764706
+"695","Ireland",2023,NA,"West",7.26309433962264
+"696","Luxembourg",2023,NA,"West",7.69825
+"697","Netherlands",2023,NA,"West",8.24141509433962
