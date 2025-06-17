@@ -1,7 +1,7 @@
 library(dplyr)
 
 # Define base folder path
-base_path <- "desktop/programming opdracht/west Europe data/"
+base_path <- "~/Documents/GitHub/PM2.5/data/west europe data/"
 
 # Function to read UTF-16LE tab-separated files
 read_tsv_utf16 <- function(filename, year) {
@@ -27,7 +27,7 @@ all_data_west <- bind_rows(
 )
 
 # Save the combined West Europe dataset
-write.csv(all_data_west, "desktop/programming opdracht/west Europe data/All_Years_Combined_West.csv", row.names = FALSE)
+write.csv(all_data_west, "~/Documents/GitHub/PM2.5/All_Years_Combined_West.csv", row.names = FALSE)
 
 # Preview the first few rows (optional)
 print(head(all_data_west))

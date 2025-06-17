@@ -45,8 +45,28 @@ Include the following:
 
 Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
 
-```{r loading_data}
+```{r loading_data, include=FALSE}
+library(dplyr)
 
+# Define the base path
+base_path <- "~/Documents/GitHub/PM2.5/data/east europe data/"
+
+# Helper function to safely read tab-separated UTF-16LE files
+read_tsv_utf16 <- function(filename, year) {
+  path <- paste0(base_path, filename)
+  df <- read.delim(path, fileEncoding = "UTF-16LE", sep = "\t", check.names = TRUE)
+  df$Year <- year
+  df <- df[, !duplicated(names(df))]  # Remove any duplicated columns
+  return(df)
+}
+
+# Read each year
+data_2018 <- read_tsv_utf16("2018.csv", 2018)
+data_2019 <- read_tsv_utf16("2019.csv", 2019)
+data_2020 <- read_tsv_utf16("2020.csv", 2020)
+data_2021 <- read_tsv_utf16("2021.csv", 2021)
+data_2022 <- read_tsv_utf16("2022.csv", 2022)
+data_2023 <- read_tsv_utf16("2023.csv", 2023)
 ```
 
 midwest is an example dataset included in the tidyverse package
@@ -82,10 +102,24 @@ Think of things like:
 Say we want to include only larger distances (above 2) in our dataset, we can filter for this.
 
 ```{r data_cleaning}
-mean(dataset$percollege)
+
+
 ```
 
 Please use a separate 'R block' of code for each type of cleaning. So, e.g. one for missing values, a new one for removing unnecessary variables etc.
+
+### Merging
+
+```{r}
+# Combine all datasets
+all_data <- bind_rows(
+  data_2018, data_2019, data_2020,
+  data_2021, data_2022, data_2023
+)
+
+# Save the combined dataset
+write.csv(all_data, "~/Documents/GitHub/PM2.5//All_Years_East_Combined.csv", row.names = FALSE)
+```
 
 ## 3.2 Generate necessary variables
 

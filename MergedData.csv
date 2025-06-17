@@ -1,0 +1,700 @@
+country,year_of_statistics,premature_deaths,region,average_pm25
+European Union - 27 countries (from 2020),2005,431202,NA,NA
+European Union - 27 countries (from 2020),2007,349335,NA,NA
+European Union - 27 countries (from 2020),2008,354004,NA,NA
+European Union - 27 countries (from 2020),2009,362672,NA,NA
+European Union - 27 countries (from 2020),2010,367509,NA,NA
+European Union - 27 countries (from 2020),2011,391884,NA,NA
+European Union - 27 countries (from 2020),2012,343480,NA,NA
+European Union - 27 countries (from 2020),2013,328781,NA,NA
+European Union - 27 countries (from 2020),2014,291671,NA,NA
+European Union - 27 countries (from 2020),2015,322139,NA,NA
+European Union - 27 countries (from 2020),2016,283047,NA,NA
+European Union - 27 countries (from 2020),2017,304667,NA,NA
+European Union - 27 countries (from 2020),2018,291931,NA,NA
+European Union - 27 countries (from 2020),2019,231973,NA,NA
+European Union - 27 countries (from 2020),2020,238582,NA,NA
+European Union - 27 countries (from 2020),2021,254867,NA,NA
+European Union - 27 countries (from 2020),2022,239086,NA,NA
+European Union - 28 countries (2013-2020),2005,:,NA,NA
+European Union - 28 countries (2013-2020),2007,:,NA,NA
+European Union - 28 countries (2013-2020),2008,:,NA,NA
+European Union - 28 countries (2013-2020),2009,:,NA,NA
+European Union - 28 countries (2013-2020),2010,:,NA,NA
+European Union - 28 countries (2013-2020),2011,:,NA,NA
+European Union - 28 countries (2013-2020),2012,:,NA,NA
+European Union - 28 countries (2013-2020),2013,:,NA,NA
+European Union - 28 countries (2013-2020),2014,:,NA,NA
+European Union - 28 countries (2013-2020),2015,:,NA,NA
+European Union - 28 countries (2013-2020),2016,:,NA,NA
+European Union - 28 countries (2013-2020),2017,:,NA,NA
+European Union - 28 countries (2013-2020),2018,:,NA,NA
+European Union - 28 countries (2013-2020),2019,:,NA,NA
+European Union - 28 countries (2013-2020),2020,:,NA,NA
+European Union - 28 countries (2013-2020),2021,:,NA,NA
+European Union - 28 countries (2013-2020),2022,:,NA,NA
+Belgium,2005,9333,NA,NA
+Belgium,2007,7197,NA,NA
+Belgium,2008,8628,NA,NA
+Belgium,2009,9500,NA,NA
+Belgium,2010,9829,NA,NA
+Belgium,2011,9064,NA,NA
+Belgium,2012,8132,NA,NA
+Belgium,2013,8690,NA,NA
+Belgium,2014,6256,NA,NA
+Belgium,2015,6214,NA,NA
+Belgium,2016,5775,NA,NA
+Belgium,2017,5679,NA,NA
+Belgium,2018,5917,West,12.995447761194
+Belgium,2019,4537,West,11.3608676470588
+Belgium,2020,3930,West,9.6108
+Belgium,2021,4469,West,10.9348142857143
+Belgium,2022,4147,West,10.4107283950617
+Bulgaria,2005,19288,NA,NA
+Bulgaria,2007,17315,NA,NA
+Bulgaria,2008,19064,NA,NA
+Bulgaria,2009,16173,NA,NA
+Bulgaria,2010,15923,NA,NA
+Bulgaria,2011,20014,NA,NA
+Bulgaria,2012,16041,NA,NA
+Bulgaria,2013,13770,NA,NA
+Bulgaria,2014,14467,NA,NA
+Bulgaria,2015,15036,NA,NA
+Bulgaria,2016,13748,NA,NA
+Bulgaria,2017,13611,NA,NA
+Bulgaria,2018,12552,East,19.5862857142857
+Bulgaria,2019,10413,East,16.538
+Bulgaria,2020,11243,East,14.6821666666667
+Bulgaria,2021,11482,East,13.7155
+Bulgaria,2022,9003,East,13.996
+Czechia,2005,13121,NA,NA
+Czechia,2007,8613,NA,NA
+Czechia,2008,9119,NA,NA
+Czechia,2009,10233,NA,NA
+Czechia,2010,11846,NA,NA
+Czechia,2011,11180,NA,NA
+Czechia,2012,10216,NA,NA
+Czechia,2013,10922,NA,NA
+Czechia,2014,9858,NA,NA
+Czechia,2015,9250,NA,NA
+Czechia,2016,8638,NA,NA
+Czechia,2017,9336,NA,NA
+Czechia,2018,10312,NA,NA
+Czechia,2019,6947,NA,NA
+Czechia,2020,6903,NA,NA
+Czechia,2021,8489,NA,NA
+Czechia,2022,6884,NA,NA
+Denmark,2005,2994,NA,NA
+Denmark,2007,2741,NA,NA
+Denmark,2008,2416,NA,NA
+Denmark,2009,2335,NA,NA
+Denmark,2010,2580,NA,NA
+Denmark,2011,3388,NA,NA
+Denmark,2012,1918,NA,NA
+Denmark,2013,1764,NA,NA
+Denmark,2014,2422,NA,NA
+Denmark,2015,1845,NA,NA
+Denmark,2016,1652,NA,NA
+Denmark,2017,1367,NA,NA
+Denmark,2018,2204,NA,NA
+Denmark,2019,1720,NA,NA
+Denmark,2020,1041,NA,NA
+Denmark,2021,1256,NA,NA
+Denmark,2022,1195,NA,NA
+Germany,2005,66678,NA,NA
+Germany,2007,48899,NA,NA
+Germany,2008,54721,NA,NA
+Germany,2009,63395,NA,NA
+Germany,2010,68740,NA,NA
+Germany,2011,64513,NA,NA
+Germany,2012,51724,NA,NA
+Germany,2013,58421,NA,NA
+Germany,2014,52069,NA,NA
+Germany,2015,49729,NA,NA
+Germany,2016,44221,NA,NA
+Germany,2017,45212,NA,NA
+Germany,2018,49311,West,12.7907114427861
+Germany,2019,34375,West,10.5508357487923
+Germany,2020,28926,West,9.31781739130435
+Germany,2021,32356,West,9.65775735294118
+Germany,2022,32628,West,9.5454668989547
+Estonia,2005,776,NA,NA
+Estonia,2007,633,NA,NA
+Estonia,2008,454,NA,NA
+Estonia,2009,277,NA,NA
+Estonia,2010,445,NA,NA
+Estonia,2011,347,NA,NA
+Estonia,2012,323,NA,NA
+Estonia,2013,306,NA,NA
+Estonia,2014,401,NA,NA
+Estonia,2015,214,NA,NA
+Estonia,2016,129,NA,NA
+Estonia,2017,72,NA,NA
+Estonia,2018,231,East,6.09385714285714
+Estonia,2019,80,East,4.68542857142857
+Estonia,2020,59,East,4.37757142857143
+Estonia,2021,114,East,4.9254
+Estonia,2022,87,East,4.66585714285714
+Ireland,2005,644,NA,NA
+Ireland,2007,325,NA,NA
+Ireland,2008,832,NA,NA
+Ireland,2009,737,NA,NA
+Ireland,2010,1009,NA,NA
+Ireland,2011,770,NA,NA
+Ireland,2012,642,NA,NA
+Ireland,2013,880,NA,NA
+Ireland,2014,816,NA,NA
+Ireland,2015,392,NA,NA
+Ireland,2016,466,NA,NA
+Ireland,2017,277,NA,NA
+Ireland,2018,625,West,7.99655555555556
+Ireland,2019,597,West,9.06444444444444
+Ireland,2020,489,West,8.35783870967742
+Ireland,2021,487,West,8.36923529411765
+Ireland,2022,527,West,8.26110638297872
+Greece,2005,15315,NA,NA
+Greece,2007,12577,NA,NA
+Greece,2008,13202,NA,NA
+Greece,2009,13421,NA,NA
+Greece,2010,11990,NA,NA
+Greece,2011,13003,NA,NA
+Greece,2012,12276,NA,NA
+Greece,2013,11479,NA,NA
+Greece,2014,9651,NA,NA
+Greece,2015,12502,NA,NA
+Greece,2016,12169,NA,NA
+Greece,2017,20695,NA,NA
+Greece,2018,11151,NA,NA
+Greece,2019,9480,NA,NA
+Greece,2020,8813,NA,NA
+Greece,2021,11026,NA,NA
+Greece,2022,10729,NA,NA
+Spain,2005,34031,NA,NA
+Spain,2007,31439,NA,NA
+Spain,2008,24590,NA,NA
+Spain,2009,24482,NA,NA
+Spain,2010,19199,NA,NA
+Spain,2011,20928,NA,NA
+Spain,2012,20396,NA,NA
+Spain,2013,15816,NA,NA
+Spain,2014,15454,NA,NA
+Spain,2015,22199,NA,NA
+Spain,2016,17515,NA,NA
+Spain,2017,20152,NA,NA
+Spain,2018,15124,NA,NA
+Spain,2019,14745,NA,NA
+Spain,2020,16994,NA,NA
+Spain,2021,14088,NA,NA
+Spain,2022,18549,NA,NA
+France,2005,38735,NA,NA
+France,2007,32812,NA,NA
+France,2008,34929,NA,NA
+France,2009,39699,NA,NA
+France,2010,40526,NA,NA
+France,2011,40048,NA,NA
+France,2012,36665,NA,NA
+France,2013,35682,NA,NA
+France,2014,22700,NA,NA
+France,2015,28192,NA,NA
+France,2016,24435,NA,NA
+France,2017,22995,NA,NA
+France,2018,22902,West,10.4509659863946
+France,2019,18697,West,9.47237662337662
+France,2020,16476,West,8.60538150289017
+France,2021,19704,West,9.34583597883598
+France,2022,20683,West,9.55549261083744
+Croatia,2005,6542,NA,NA
+Croatia,2007,5256,NA,NA
+Croatia,2008,4912,NA,NA
+Croatia,2009,5375,NA,NA
+Croatia,2010,5435,NA,NA
+Croatia,2011,5907,NA,NA
+Croatia,2012,4254,NA,NA
+Croatia,2013,4127,NA,NA
+Croatia,2014,3796,NA,NA
+Croatia,2015,4714,NA,NA
+Croatia,2016,5199,NA,NA
+Croatia,2017,4753,NA,NA
+Croatia,2018,4804,NA,NA
+Croatia,2019,3563,NA,NA
+Croatia,2020,4260,NA,NA
+Croatia,2021,4369,NA,NA
+Croatia,2022,3813,NA,NA
+Italy,2005,71867,NA,NA
+Italy,2007,60498,NA,NA
+Italy,2008,58572,NA,NA
+Italy,2009,58013,NA,NA
+Italy,2010,51817,NA,NA
+Italy,2011,65837,NA,NA
+Italy,2012,59739,NA,NA
+Italy,2013,54592,NA,NA
+Italy,2014,46040,NA,NA
+Italy,2015,61503,NA,NA
+Italy,2016,50044,NA,NA
+Italy,2017,55162,NA,NA
+Italy,2018,47316,NA,NA
+Italy,2019,42679,NA,NA
+Italy,2020,52312,NA,NA
+Italy,2021,44461,NA,NA
+Italy,2022,48606,NA,NA
+Cyprus,2005,1136,NA,NA
+Cyprus,2007,884,NA,NA
+Cyprus,2008,963,NA,NA
+Cyprus,2009,753,NA,NA
+Cyprus,2010,792,NA,NA
+Cyprus,2011,931,NA,NA
+Cyprus,2012,1070,NA,NA
+Cyprus,2013,589,NA,NA
+Cyprus,2014,620,NA,NA
+Cyprus,2015,709,NA,NA
+Cyprus,2016,541,NA,NA
+Cyprus,2017,620,NA,NA
+Cyprus,2018,527,NA,NA
+Cyprus,2019,583,NA,NA
+Cyprus,2020,564,NA,NA
+Cyprus,2021,629,NA,NA
+Cyprus,2022,693,NA,NA
+Latvia,2005,2639,NA,NA
+Latvia,2007,1616,NA,NA
+Latvia,2008,2400,NA,NA
+Latvia,2009,1690,NA,NA
+Latvia,2010,2044,NA,NA
+Latvia,2011,1427,NA,NA
+Latvia,2012,1526,NA,NA
+Latvia,2013,1553,NA,NA
+Latvia,2014,1783,NA,NA
+Latvia,2015,1247,NA,NA
+Latvia,2016,1241,NA,NA
+Latvia,2017,898,NA,NA
+Latvia,2018,1434,East,14.1684
+Latvia,2019,1002,East,11.433
+Latvia,2020,836,East,10.9822
+Latvia,2021,1405,East,13.55325
+Latvia,2022,822,East,9.3974
+Lithuania,2005,3224,NA,NA
+Lithuania,2007,2632,NA,NA
+Lithuania,2008,3030,NA,NA
+Lithuania,2009,2157,NA,NA
+Lithuania,2010,3158,NA,NA
+Lithuania,2011,2574,NA,NA
+Lithuania,2012,2257,NA,NA
+Lithuania,2013,2477,NA,NA
+Lithuania,2014,2791,NA,NA
+Lithuania,2015,2086,NA,NA
+Lithuania,2016,2027,NA,NA
+Lithuania,2017,1463,NA,NA
+Lithuania,2018,2079,East,12.8505714285714
+Lithuania,2019,1860,East,12.3624285714286
+Lithuania,2020,1454,East,8.822
+Lithuania,2021,2138,East,10.027
+Lithuania,2022,1472,East,8.779625
+Luxembourg,2005,261,NA,NA
+Luxembourg,2007,207,NA,NA
+Luxembourg,2008,235,NA,NA
+Luxembourg,2009,279,NA,NA
+Luxembourg,2010,278,NA,NA
+Luxembourg,2011,238,NA,NA
+Luxembourg,2012,207,NA,NA
+Luxembourg,2013,241,NA,NA
+Luxembourg,2014,182,NA,NA
+Luxembourg,2015,201,NA,NA
+Luxembourg,2016,175,NA,NA
+Luxembourg,2017,149,NA,NA
+Luxembourg,2018,149,West,9.07025
+Luxembourg,2019,94,West,7.8805
+Luxembourg,2020,74,West,7.1435
+Luxembourg,2021,77,West,7.1165
+Luxembourg,2022,75,West,7.739
+Hungary,2005,18008,NA,NA
+Hungary,2007,13054,NA,NA
+Hungary,2008,12961,NA,NA
+Hungary,2009,13498,NA,NA
+Hungary,2010,13702,NA,NA
+Hungary,2011,16364,NA,NA
+Hungary,2012,12509,NA,NA
+Hungary,2013,11577,NA,NA
+Hungary,2014,10763,NA,NA
+Hungary,2015,13034,NA,NA
+Hungary,2016,11298,NA,NA
+Hungary,2017,12620,NA,NA
+Hungary,2018,12171,East,18.578
+Hungary,2019,8672,East,14.752125
+Hungary,2020,9504,East,13.3259090909091
+Hungary,2021,10393,East,14.7845833333333
+Hungary,2022,8573,East,13.5728571428571
+Malta,2005,351,NA,NA
+Malta,2007,271,NA,NA
+Malta,2008,227,NA,NA
+Malta,2009,260,NA,NA
+Malta,2010,188,NA,NA
+Malta,2011,243,NA,NA
+Malta,2012,181,NA,NA
+Malta,2013,173,NA,NA
+Malta,2014,162,NA,NA
+Malta,2015,199,NA,NA
+Malta,2016,150,NA,NA
+Malta,2017,173,NA,NA
+Malta,2018,196,NA,NA
+Malta,2019,190,NA,NA
+Malta,2020,151,NA,NA
+Malta,2021,196,NA,NA
+Malta,2022,173,NA,NA
+Netherlands,2005,11988,NA,NA
+Netherlands,2007,10169,NA,NA
+Netherlands,2008,11278,NA,NA
+Netherlands,2009,11239,NA,NA
+Netherlands,2010,11897,NA,NA
+Netherlands,2011,11675,NA,NA
+Netherlands,2012,8649,NA,NA
+Netherlands,2013,9198,NA,NA
+Netherlands,2014,8603,NA,NA
+Netherlands,2015,7682,NA,NA
+Netherlands,2016,6645,NA,NA
+Netherlands,2017,6702,NA,NA
+Netherlands,2018,7563,West,12.4428444444444
+Netherlands,2019,6063,West,10.9171333333333
+Netherlands,2020,4976,West,9.25469565217391
+Netherlands,2021,5700,West,9.60912765957447
+Netherlands,2022,5254,West,9.49339130434783
+Austria,2005,7167,NA,NA
+Austria,2007,5416,NA,NA
+Austria,2008,5921,NA,NA
+Austria,2009,5826,NA,NA
+Austria,2010,6737,NA,NA
+Austria,2011,6720,NA,NA
+Austria,2012,5391,NA,NA
+Austria,2013,5856,NA,NA
+Austria,2014,4289,NA,NA
+Austria,2015,4901,NA,NA
+Austria,2016,3961,NA,NA
+Austria,2017,4234,NA,NA
+Austria,2018,5007,West,14.1077954545455
+Austria,2019,3682,West,11.6547115384615
+Austria,2020,3168,West,10.206298245614
+Austria,2021,3204,West,10.6510327868852
+Austria,2022,3321,West,10.5354852941176
+Poland,2005,42174,NA,NA
+Poland,2007,36094,NA,NA
+Poland,2008,40404,NA,NA
+Poland,2009,42377,NA,NA
+Poland,2010,52661,NA,NA
+Poland,2011,50128,NA,NA
+Poland,2012,47721,NA,NA
+Poland,2013,45917,NA,NA
+Poland,2014,45153,NA,NA
+Poland,2015,44506,NA,NA
+Poland,2016,41588,NA,NA
+Poland,2017,44862,NA,NA
+Poland,2018,46823,East,23.5554526315789
+Poland,2019,35675,East,18.9565135135135
+Poland,2020,36562,East,16.9173658536585
+Poland,2021,47335,East,19.1697615384615
+Poland,2022,34719,East,16.6236315789474
+Portugal,2005,9168,NA,NA
+Portugal,2007,6282,NA,NA
+Portugal,2008,4293,NA,NA
+Portugal,2009,5217,NA,NA
+Portugal,2010,4074,NA,NA
+Portugal,2011,4870,NA,NA
+Portugal,2012,3682,NA,NA
+Portugal,2013,3653,NA,NA
+Portugal,2014,2620,NA,NA
+Portugal,2015,3942,NA,NA
+Portugal,2016,2912,NA,NA
+Portugal,2017,3041,NA,NA
+Portugal,2018,2640,NA,NA
+Portugal,2019,2517,NA,NA
+Portugal,2020,2641,NA,NA
+Portugal,2021,2129,NA,NA
+Portugal,2022,3639,NA,NA
+Romania,2005,42331,NA,NA
+Romania,2007,33137,NA,NA
+Romania,2008,30316,NA,NA
+Romania,2009,26399,NA,NA
+Romania,2010,21934,NA,NA
+Romania,2011,29354,NA,NA
+Romania,2012,28368,NA,NA
+Romania,2013,23046,NA,NA
+Romania,2014,22053,NA,NA
+Romania,2015,24011,NA,NA
+Romania,2016,21597,NA,NA
+Romania,2017,23484,NA,NA
+Romania,2018,23168,East,18.6105714285714
+Romania,2019,18481,East,16.132
+Romania,2020,21601,East,14.1303636363636
+Romania,2021,22086,East,14.6456153846154
+Romania,2022,17949,East,14.1681176470588
+Slovenia,2005,2035,NA,NA
+Slovenia,2007,1558,NA,NA
+Slovenia,2008,1563,NA,NA
+Slovenia,2009,1698,NA,NA
+Slovenia,2010,1717,NA,NA
+Slovenia,2011,1954,NA,NA
+Slovenia,2012,1632,NA,NA
+Slovenia,2013,1605,NA,NA
+Slovenia,2014,1306,NA,NA
+Slovenia,2015,1657,NA,NA
+Slovenia,2016,1470,NA,NA
+Slovenia,2017,1556,NA,NA
+Slovenia,2018,1498,East,15.37
+Slovenia,2019,1144,East,12.45275
+Slovenia,2020,1236,East,14.622
+Slovenia,2021,1137,East,12.2976
+Slovenia,2022,1278,East,15.396
+Slovakia,2005,6700,NA,NA
+Slovakia,2007,5344,NA,NA
+Slovakia,2008,5544,NA,NA
+Slovakia,2009,5337,NA,NA
+Slovakia,2010,5882,NA,NA
+Slovakia,2011,6771,NA,NA
+Slovakia,2012,5580,NA,NA
+Slovakia,2013,5281,NA,NA
+Slovakia,2014,4877,NA,NA
+Slovakia,2015,5131,NA,NA
+Slovakia,2016,4473,NA,NA
+Slovakia,2017,5032,NA,NA
+Slovakia,2018,4857,East,17.99575
+Slovakia,2019,3465,East,15.4065625
+Slovakia,2020,3920,East,14.6324242424242
+Slovakia,2021,5359,East,16.0808648648649
+Slovakia,2022,3710,East,14.8501304347826
+Finland,2005,1242,NA,NA
+Finland,2007,1261,NA,NA
+Finland,2008,846,NA,NA
+Finland,2009,629,NA,NA
+Finland,2010,1010,NA,NA
+Finland,2011,954,NA,NA
+Finland,2012,774,NA,NA
+Finland,2013,369,NA,NA
+Finland,2014,883,NA,NA
+Finland,2015,229,NA,NA
+Finland,2016,228,NA,NA
+Finland,2017,98,NA,NA
+Finland,2018,455,NA,NA
+Finland,2019,171,NA,NA
+Finland,2020,63,NA,NA
+Finland,2021,162,NA,NA
+Finland,2022,68,NA,NA
+Sweden,2005,3442,NA,NA
+Sweden,2007,3093,NA,NA
+Sweden,2008,2570,NA,NA
+Sweden,2009,1660,NA,NA
+Sweden,2010,2084,NA,NA
+Sweden,2011,2668,NA,NA
+Sweden,2012,1597,NA,NA
+Sweden,2013,785,NA,NA
+Sweden,2014,1644,NA,NA
+Sweden,2015,799,NA,NA
+Sweden,2016,737,NA,NA
+Sweden,2017,412,NA,NA
+Sweden,2018,902,NA,NA
+Sweden,2019,532,NA,NA
+Sweden,2020,370,NA,NA
+Sweden,2021,604,NA,NA
+Sweden,2022,476,NA,NA
+Iceland,2005,31,NA,NA
+Iceland,2007,26,NA,NA
+Iceland,2008,48,NA,NA
+Iceland,2009,18,NA,NA
+Iceland,2010,36,NA,NA
+Iceland,2011,4,NA,NA
+Iceland,2012,0,NA,NA
+Iceland,2013,24,NA,NA
+Iceland,2014,25,NA,NA
+Iceland,2015,21,NA,NA
+Iceland,2016,11,NA,NA
+Iceland,2017,14,NA,NA
+Iceland,2018,7,NA,NA
+Iceland,2019,2,NA,NA
+Iceland,2020,0,NA,NA
+Iceland,2021,1,NA,NA
+Iceland,2022,0,NA,NA
+Liechtenstein,2005,27,NA,NA
+Liechtenstein,2007,20,NA,NA
+Liechtenstein,2008,22,NA,NA
+Liechtenstein,2009,18,NA,NA
+Liechtenstein,2010,23,NA,NA
+Liechtenstein,2011,20,NA,NA
+Liechtenstein,2012,10,NA,NA
+Liechtenstein,2013,13,NA,NA
+Liechtenstein,2014,8,NA,NA
+Liechtenstein,2015,12,NA,NA
+Liechtenstein,2016,10,NA,NA
+Liechtenstein,2017,9,NA,NA
+Liechtenstein,2018,8,NA,NA
+Liechtenstein,2019,6,NA,NA
+Liechtenstein,2020,7,NA,NA
+Liechtenstein,2021,7,NA,NA
+Liechtenstein,2022,7,NA,NA
+Norway,2005,1324,NA,NA
+Norway,2007,1187,NA,NA
+Norway,2008,1005,NA,NA
+Norway,2009,833,NA,NA
+Norway,2010,1292,NA,NA
+Norway,2011,1283,NA,NA
+Norway,2012,868,NA,NA
+Norway,2013,768,NA,NA
+Norway,2014,695,NA,NA
+Norway,2015,427,NA,NA
+Norway,2016,450,NA,NA
+Norway,2017,296,NA,NA
+Norway,2018,555,NA,NA
+Norway,2019,319,NA,NA
+Norway,2020,157,NA,NA
+Norway,2021,406,NA,NA
+Norway,2022,347,NA,NA
+Switzerland,2005,4698,NA,NA
+Switzerland,2007,3773,NA,NA
+Switzerland,2008,4187,NA,NA
+Switzerland,2009,4122,NA,NA
+Switzerland,2010,4579,NA,NA
+Switzerland,2011,4203,NA,NA
+Switzerland,2012,3412,NA,NA
+Switzerland,2013,3979,NA,NA
+Switzerland,2014,2929,NA,NA
+Switzerland,2015,3306,NA,NA
+Switzerland,2016,2356,NA,NA
+Switzerland,2017,2312,NA,NA
+Switzerland,2018,2260,NA,NA
+Switzerland,2019,1792,NA,NA
+Switzerland,2020,1722,NA,NA
+Switzerland,2021,1684,NA,NA
+Switzerland,2022,1902,NA,NA
+United Kingdom,2005,:,NA,NA
+United Kingdom,2007,:,NA,NA
+United Kingdom,2008,:,NA,NA
+United Kingdom,2009,:,NA,NA
+United Kingdom,2010,:,NA,NA
+United Kingdom,2011,:,NA,NA
+United Kingdom,2012,:,NA,NA
+United Kingdom,2013,:,NA,NA
+United Kingdom,2014,:,NA,NA
+United Kingdom,2015,:,NA,NA
+United Kingdom,2016,:,NA,NA
+United Kingdom,2017,:,NA,NA
+United Kingdom,2018,:,NA,NA
+United Kingdom,2019,:,NA,NA
+United Kingdom,2020,:,NA,NA
+United Kingdom,2021,:,NA,NA
+United Kingdom,2022,:,NA,NA
+Bosnia and Herzegovina,2005,7699,NA,NA
+Bosnia and Herzegovina,2007,6313,NA,NA
+Bosnia and Herzegovina,2008,5910,NA,NA
+Bosnia and Herzegovina,2009,7000,NA,NA
+Bosnia and Herzegovina,2010,6772,NA,NA
+Bosnia and Herzegovina,2011,7314,NA,NA
+Bosnia and Herzegovina,2012,5338,NA,NA
+Bosnia and Herzegovina,2013,4165,NA,NA
+Bosnia and Herzegovina,2014,3957,NA,NA
+Bosnia and Herzegovina,2015,5351,NA,NA
+Bosnia and Herzegovina,2016,7477,NA,NA
+Bosnia and Herzegovina,2017,6219,NA,NA
+Bosnia and Herzegovina,2018,7313,NA,NA
+Bosnia and Herzegovina,2019,5797,NA,NA
+Bosnia and Herzegovina,2020,9159,NA,NA
+Bosnia and Herzegovina,2021,8986,NA,NA
+Bosnia and Herzegovina,2022,6212,NA,NA
+Montenegro,2005,1031,NA,NA
+Montenegro,2007,1018,NA,NA
+Montenegro,2008,929,NA,NA
+Montenegro,2009,965,NA,NA
+Montenegro,2010,1265,NA,NA
+Montenegro,2011,1254,NA,NA
+Montenegro,2012,898,NA,NA
+Montenegro,2013,737,NA,NA
+Montenegro,2014,666,NA,NA
+Montenegro,2015,879,NA,NA
+Montenegro,2016,962,NA,NA
+Montenegro,2017,875,NA,NA
+Montenegro,2018,975,NA,NA
+Montenegro,2019,856,NA,NA
+Montenegro,2020,920,NA,NA
+Montenegro,2021,1079,NA,NA
+Montenegro,2022,712,NA,NA
+North Macedonia,2005,6303,NA,NA
+North Macedonia,2007,4173,NA,NA
+North Macedonia,2008,4236,NA,NA
+North Macedonia,2009,5315,NA,NA
+North Macedonia,2010,4973,NA,NA
+North Macedonia,2011,5676,NA,NA
+North Macedonia,2012,5269,NA,NA
+North Macedonia,2013,4892,NA,NA
+North Macedonia,2014,4442,NA,NA
+North Macedonia,2015,4856,NA,NA
+North Macedonia,2016,6048,NA,NA
+North Macedonia,2017,6174,NA,NA
+North Macedonia,2018,5124,NA,NA
+North Macedonia,2019,3278,NA,NA
+North Macedonia,2020,3758,NA,NA
+North Macedonia,2021,4980,NA,NA
+North Macedonia,2022,3636,NA,NA
+Albania,2005,6513,NA,NA
+Albania,2007,4900,NA,NA
+Albania,2008,4372,NA,NA
+Albania,2009,5197,NA,NA
+Albania,2010,6244,NA,NA
+Albania,2011,5702,NA,NA
+Albania,2012,4944,NA,NA
+Albania,2013,4297,NA,NA
+Albania,2014,3333,NA,NA
+Albania,2015,4660,NA,NA
+Albania,2016,5138,NA,NA
+Albania,2017,5280,NA,NA
+Albania,2018,4781,NA,NA
+Albania,2019,3664,NA,NA
+Albania,2020,3648,NA,NA
+Albania,2021,4605,NA,NA
+Albania,2022,3458,NA,NA
+Serbia,2005,18330,NA,NA
+Serbia,2007,14776,NA,NA
+Serbia,2008,14908,NA,NA
+Serbia,2009,15083,NA,NA
+Serbia,2010,11877,NA,NA
+Serbia,2011,17520,NA,NA
+Serbia,2012,13373,NA,NA
+Serbia,2013,11205,NA,NA
+Serbia,2014,11554,NA,NA
+Serbia,2015,13180,NA,NA
+Serbia,2016,13759,NA,NA
+Serbia,2017,16205,NA,NA
+Serbia,2018,14716,NA,NA
+Serbia,2019,11130,NA,NA
+Serbia,2020,14381,NA,NA
+Serbia,2021,14850,NA,NA
+Serbia,2022,10799,NA,NA
+Kosovo*,2005,4970,NA,NA
+Kosovo*,2007,4249,NA,NA
+Kosovo*,2008,4226,NA,NA
+Kosovo*,2009,4684,NA,NA
+Kosovo*,2010,5298,NA,NA
+Kosovo*,2011,4683,NA,NA
+Kosovo*,2012,4158,NA,NA
+Kosovo*,2013,3937,NA,NA
+Kosovo*,2014,3745,NA,NA
+Kosovo*,2015,3961,NA,NA
+Kosovo*,2016,4039,NA,NA
+Kosovo*,2017,4180,NA,NA
+Kosovo*,2018,4097,NA,NA
+Kosovo*,2019,2759,NA,NA
+Kosovo*,2020,3059,NA,NA
+Kosovo*,2021,2925,NA,NA
+Kosovo*,2022,2372,NA,NA
+:,2005,not available,NA,NA
+Bulgaria,2023,NA,East,14.10125
+Estonia,2023,NA,East,4.53542857142857
+Hungary,2023,NA,East,12.2233333333333
+Latvia,2023,NA,East,8.8218
+Lithuania,2023,NA,East,7.47857142857143
+Poland,2023,NA,East,14.5346444444444
+Romania,2023,NA,East,14.7094666666667
+Slovakia,2023,NA,East,13.2966170212766
+Slovenia,2023,NA,East,14.0272222222222
+Austria,2023,NA,West,9.36018461538461
+Belgium,2023,NA,West,9.06546341463415
+France,2023,NA,West,8.57674666666667
+Germany,2023,NA,West,8.17179411764706
+Ireland,2023,NA,West,7.26309433962264
+Luxembourg,2023,NA,West,7.69825
+Netherlands,2023,NA,West,8.24141509433962
+NA,NA,NA,East,NA
+NA,NA,NA,West,NA
