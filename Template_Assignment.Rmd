@@ -116,8 +116,6 @@ head(df_mortality_raw)
 
 ```
 
-midwest is an example dataset included in the tidyverse package
-
 ## 2.2 Provide a short summary of the dataset(s)
 
 ```{r}
@@ -128,13 +126,25 @@ head(df_mortality_raw)
 
 ```
 
-In this case we see 28 variables, but we miss some information on what units they are in. We also don't know anything about the year/moment in which this data has been captured.
+The air pollution datasets were obtained from the European Environment Agency (EEA) and include data from 2018 to 2023. Each year’s file contains country-level indicators such as:
 
-``` r
-inline_code = TRUE
-```
+-   **PM2.5 concentration (µg/m³)**: annual average exposure to fine particulate matter
 
-These are things that are usually included in the metadata of the dataset. For your project, you need to provide us with the information from your metadata that we need to understand your dataset of choice.
+-   **Number of stations**: count of monitoring stations reporting valid data
+
+-   **Threshold exceedances**: number of days or measurements above EU air quality limits
+
+-   **Urban and rural averages**: in some years, separate data is given for urban/rural zones
+
+The data is measured and reported according to EEA guidelines, but some column names are unclear (`Threshold.1`) and units are missing for certain variables.
+
+The premature mortality dataset is sourced from the UN SDG indicators (Goal 11.6.2). It reports:
+
+-   **Premature deaths**
+
+-   **By country and year**
+
+The definition of premature death reflects deaths attributable to air pollution.
 
 ## 2.3 Describe the type of variables included
 
