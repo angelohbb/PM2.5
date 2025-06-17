@@ -185,6 +185,16 @@ Here you provide a description of why the plot above is relevant to your specifi
 
 ## 4.1 Discuss your findings
 
+Our analysis reveals a clear regional divide in air quality and its impact on public health across Europe, specifically when comparing Eastern and Western Europe.
+
+First, the spatial analysis shows that Eastern European countries consistently have higher average PM2.5 levels than Western European countries. Countries like Poland, Romania, Bulgaria, and Hungary showed the most concerning pollution levels. In contrast, France, Germany, and Ireland had much lower PM2.5 concentrations. This supports the hypothesis that air pollution is geographically uneven across Europe, and suggests that factors such as outdated industrial infrastructure, energy production methods, and less stringent environmental policies in the East contribute to this discrepancy.
+
+Second, the temporal analysis from 2018 to 2022 shows a general decline in PM2.5 levels, reaching a low point in 2020. This dip likely correlates with the COVID-19 pandemic, during which lockdowns reduced transportation and industrial emissions. However, the rebound in 2021 indicates that these reductions were temporary, and that without long-term policy changes, improvements in air quality may not be sustained. This emphasizes the need for permanent structural interventions rather than relying on short-term events.
+
+Third, the subgroup analysis highlights the public health consequences of this pollution. Eastern European countries not only have higher PM2.5 levels but also show significantly higher mortality rates related to air pollution. For instance, Bulgaria, Romania, and Poland exhibit more than 150 deaths per 100,000 people, whereas Western European countries like France, Belgium, and Austria report less than half that amount. This strongly suggests that higher pollution directly correlates with higher health risks, and it highlights the urgent need for targeted health and environmental policies in Eastern Europe.
+
+In conclusion, our findings support the idea that PM2.5 pollution is both an environmental and a social issue, with unequal health outcomes across Europe. Tackling this problem requires coordinated policy efforts, especially in Eastern Europe, focusing on clean energy, industrial modernization, and public health investment. Without addressing these disparities, the health impacts of air pollution will continue to disproportionately affect populations in the East.
+
 # Part 5 - Reproducibility
 
 ## 5.1 Github repository link
@@ -193,4 +203,6 @@ Provide the link to your PUBLIC repository here: ...
 
 ## 5.2 Reference list
 
-Use APA referencing throughout your document.
+World Health Organization. (2021). Air pollution: Health impacts. <https://www.who.int/health-topics/air-pollution#tab=tab_1>
+
+\
