@@ -46,18 +46,22 @@ Include the following:
 Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
 
 ```{r loading_data, include=FALSE}
-# STEP 2.1 — Load in raw starting data from East and West Europe
+# STEP 2.1 — Load in the Starting Data
 
+# Load required packages
 library(dplyr)
+library(readxl)
 
-# ---------- Load East Europe ----------
+# ----------------------------
+# Load East Europe Data
+# ----------------------------
 east_base_path <- "~/Documents/GitHub/PM2.5/data/east europe data/"
 
 read_tsv_utf16_east <- function(filename, year) {
   path <- paste0(east_base_path, filename)
   df <- read.delim(path, fileEncoding = "UTF-16LE", sep = "\t", check.names = TRUE)
   df$Year <- year
-  df <- df[, !duplicated(names(df))]
+  df <- df[, !duplicated(names(df))]  # remove duplicated columns
   return(df)
 }
 
@@ -68,13 +72,14 @@ east_2021 <- read_tsv_utf16_east("2021.csv", 2021)
 east_2022 <- read_tsv_utf16_east("2022.csv", 2022)
 east_2023 <- read_tsv_utf16_east("2023.csv", 2023)
 
-# Combine raw East Europe data
 all_data_east <- bind_rows(
-  data_2018, data_2019, data_2020,
-  data_2021, data_2022, data_2023
+  east_2018, east_2019, east_2020,
+  east_2021, east_2022, east_2023
 )
 
-# ---------- Load West Europe ----------
+# ----------------------------
+# Load West Europe Data
+# ----------------------------
 west_base_path <- "~/Documents/GitHub/PM2.5/data/west europe data/"
 
 read_tsv_utf16_west <- function(filename, year) {
@@ -92,11 +97,22 @@ west_2021 <- read_tsv_utf16_west("2021 west.csv", 2021)
 west_2022 <- read_tsv_utf16_west("2022 west.csv", 2022)
 west_2023 <- read_tsv_utf16_west("2023 west.csv", 2023)
 
-# Combine raw West Europe data
 all_data_west <- bind_rows(
   west_2018, west_2019, west_2020,
   west_2021, west_2022, west_2023
 )
+
+# ----------------------------
+# Load Mortality (Premature Deaths) Dataset
+# ----------------------------
+mortality_excel_path <- path.expand("~/Documents/GitHub/PM2.5/sdg_11_52_page_spreadsheet-3.xlsx")
+
+df_mortality_raw <- read_excel(mortality_excel_path, skip = 9)
+
+# Optional: preview all raw datasets
+head(all_data_east)
+head(all_data_west)
+head(df_mortality_raw)
 
 ```
 
@@ -105,7 +121,11 @@ midwest is an example dataset included in the tidyverse package
 ## 2.2 Provide a short summary of the dataset(s)
 
 ```{r}
-head(dataset)
+# Show structure of each raw dataset
+summary(all_data_east)
+summary(all_data_west)
+head(df_mortality_raw)
+
 ```
 
 In this case we see 28 variables, but we miss some information on what units they are in. We also don't know anything about the year/moment in which this data has been captured.
