@@ -14,12 +14,14 @@ library(forcats)
 # ----------------------------------------
 # STEP 2: Load and clean your dataset
 # ----------------------------------------
-MergedData <- read_csv("~/Desktop/programming opdracht/spreadsheets/MergedData.csv")
-MergedData$Premature_deaths <- as.numeric(gsub(",", "", MergedData$Premature_deaths))
+MergedData <- read_csv("/Users/angelohabib/Documents/GitHub/PM2.5/MergedData.csv")
+
+# Clean numeric column (remove commas just in case)
+MergedData$premature_deaths <- as.numeric(gsub(",", "", MergedData$premature_deaths))
 
 # Filter only countries with both death and PM2.5 data
 filtered_data <- MergedData %>%
-  filter(!is.na(Premature_deaths), !is.na(average_pm25))
+  filter(!is.na(premature_deaths), !is.na(average_pm25))
 
 # ----------------------------------------
 # STEP 3: List of countries with data
@@ -50,24 +52,34 @@ population_region_df <- tibble::tibble(
 # ----------------------------------------
 avg_deaths <- filtered_data %>%
   group_by(country) %>%
-  summarise(avg_deaths = mean(Premature_deaths, na.rm = TRUE)) %>%
+  summarise(avg_deaths = mean(premature_deaths, na.rm = TRUE)) %>%
   inner_join(population_region_df, by = "country") %>%
   mutate(
-    deaths_per_100k = (avg_deaths / population) * 100000,
-    country = fct_reorder(country, deaths_per_100k)
+    deaths_per_100k = (avg_deaths / population) * 100000
   )
 
 # ----------------------------------------
-# STEP 6: Plot bar chart with region coloring
+# STEP 6: Aggregate by region — only two bars
 # ----------------------------------------
-ggplot(avg_deaths, aes(x = country, y = deaths_per_100k, fill = region)) +
+region_summary <- avg_deaths %>%
+  group_by(region) %>%
+  summarise(
+    avg_deaths_per_100k = mean(deaths_per_100k),
+    .groups = "drop"
+  ) %>%
+  mutate(region = fct_reorder(region, avg_deaths_per_100k))
+
+# ----------------------------------------
+# STEP 7: Plot bar chart with region coloring (2 bars)
+# ----------------------------------------
+ggplot(region_summary, aes(x = region, y = avg_deaths_per_100k, fill = region)) +
   geom_col() +
   coord_flip() +
   scale_fill_manual(values = c("Western" = "steelblue", "Eastern" = "tomato")) +
   labs(
     title = "PM2.5-Related Premature Deaths per 100,000 People",
     subtitle = "Western vs Eastern Europe",
-    x = "Country",
+    x = "Region",
     y = "Deaths per 100,000",
     fill = "Region"
   ) +
@@ -76,3 +88,4 @@ ggplot(avg_deaths, aes(x = country, y = deaths_per_100k, fill = region)) +
     plot.title = element_text(size = 14, face = "bold"),
     axis.text.y = element_text(size = 10)
   )
+
