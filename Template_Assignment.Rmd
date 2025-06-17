@@ -33,11 +33,11 @@ Use APA referencing throughout your document. [Here's a link to some explanation
 
 ## 1.1 Describe the Social Problem
 
-Include the following:
+Air pollution is a serious environmental and public health issue in Europe. One of the most harmful pollutants is PM2.5—fine particulate matter smaller than 2.5 micrometers. These particles can enter deep into the lungs and bloodstream, increasing the risk of asthma, heart disease, stroke, and premature death (WHO, 2021).
 
--   Why is this relevant?
+In our project, we focus on comparing Eastern and Western Europe to see if there are major differences in both PM2.5 pollution levels and the mortality rates caused by long-term exposure. This comparison is relevant because the two regions differ in industrialization, environmental policies, and healthcare systems—all of which can influence air quality and health outcomes.
 
--   ...
+We used two datasets: one showing average PM2.5 levels across countries, and one reporting death rates related to PM2.5 exposure. Our aim is to understand how air pollution affects public health in different parts of Europe and where improvements are most needed.
 
 # Part 2 - Data Sourcing
 
