@@ -27,7 +27,7 @@ all_data <- bind_rows(
 )
 
 # Save the combined dataset
-write.csv(all_data, "~/Documents/GitHub/PM2.5//All_Years_East_Combined.csv", row.names = FALSE)
+write.csv(all_data, "~/Documents/GitHub/PM2.5/All_Years_East_Combined.csv", row.names = FALSE)
 
 
 # Optional: preview the result

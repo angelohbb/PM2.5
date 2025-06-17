@@ -72,10 +72,6 @@ east_2021 <- read_tsv_utf16_east("2021.csv", 2021)
 east_2022 <- read_tsv_utf16_east("2022.csv", 2022)
 east_2023 <- read_tsv_utf16_east("2023.csv", 2023)
 
-all_data_east <- bind_rows(
-  east_2018, east_2019, east_2020,
-  east_2021, east_2022, east_2023
-)
 
 # ----------------------------
 # Load West Europe Data
@@ -97,10 +93,6 @@ west_2021 <- read_tsv_utf16_west("2021 west.csv", 2021)
 west_2022 <- read_tsv_utf16_west("2022 west.csv", 2022)
 west_2023 <- read_tsv_utf16_west("2023 west.csv", 2023)
 
-all_data_west <- bind_rows(
-  west_2018, west_2019, west_2020,
-  west_2021, west_2022, west_2023
-)
 
 # ----------------------------
 # Load Mortality (Premature Deaths) Dataset
@@ -109,10 +101,21 @@ mortality_excel_path <- path.expand("~/Documents/GitHub/PM2.5/sdg_11_52_page_spr
 
 df_mortality_raw <- read_excel(mortality_excel_path, skip = 9)
 
-# Optional: preview all raw datasets
-head(all_data_east)
-head(all_data_west)
-head(df_mortality_raw)
+```
+
+### Merging
+
+```{r}
+
+
+all_data_east <- bind_rows(
+  east_2018, east_2019, east_2020,
+  east_2021, east_2022, east_2023
+)
+all_data_west <- bind_rows(
+  west_2018, west_2019, west_2020,
+  west_2021, west_2022, west_2023
+)
 
 ```
 
@@ -120,41 +123,51 @@ head(df_mortality_raw)
 
 ```{r}
 # Show structure of each raw dataset
-summary(all_data_east)
-summary(all_data_west)
+head(all_data_east)
+head(all_data_west)
 head(df_mortality_raw)
 
 ```
 
-The air pollution datasets were obtained from the European Environment Agency (EEA) and include data from 2018 to 2023. Each year’s file contains country-level indicators such as:
+The "all_data_east" and "all_data_west" datasets contain yearly air pollution data for each country. Each row represents one country in a specific year (from 2018 to 2023). The variables include PM2.5 concentration, number of monitoring stations, threshold exceedances, and other environmental indicators. A "Year" column was added manually to keep track of the time dimension.
 
--   **PM2.5 concentration (µg/m³)**: annual average exposure to fine particulate matter
-
--   **Number of stations**: count of monitoring stations reporting valid data
-
--   **Threshold exceedances**: number of days or measurements above EU air quality limits
-
--   **Urban and rural averages**: in some years, separate data is given for urban/rural zones
-
-The data is measured and reported according to EEA guidelines, but some column names are unclear (`Threshold.1`) and units are missing for certain variables.
-
-The premature mortality dataset is sourced from the UN SDG indicators (Goal 11.6.2). It reports:
-
--   **Premature deaths**
-
--   **By country and year**
-
-The definition of premature death reflects deaths attributable to air pollution.
+The "df_mortality_raw" dataset shows the estimated number of premature deaths attributed to PM2.5 pollution. It is structured in wide format, with countries in the rows and years (e.g., 2016–2021) as column headers. Each value represents the total number of premature deaths for that country in a given year.
 
 ## 2.3 Describe the type of variables included
 
-Think of things like:
+#### **1. Air Pollution Datasets (all_data_east, all_data_west)**
 
--   Do the variables contain health information or SES information?
+The [air pollution datasets](https://www.eea.europa.eu/en/analysis/maps-and-charts/air-quality-statistics-dashboards) provide annual, country-level environmental data for the years 2018 to 2023. Most variables are numerical and describe air quality levels, monitoring activity, and regulatory exceedances.
 
--   Have they been measured by interviewing individuals or is the data coming from administrative sources?
+**Key variables include:**
 
-*For the sake of this example, I will continue with the assignment...*
+-   **PM2.5 concentration**: The annual average level of fine particulate matter in the air, measured in micrograms per cubic meter (µg/m³).
+
+-   **Number of monitoring stations**: The total number of stations reporting valid data per country and year.
+
+-   **Threshold exceedances**: The number of instances where measured pollution levels exceeded legal EU air quality thresholds.
+
+-   **Population exposure**: In some years, indicators report the proportion of the population exposed to levels above legal limits.
+
+-   **Country**: The name of the reporting country.
+
+-   **Year**: The calendar year of the observation (manually added).
+
+**Data source and collection method:**\
+These data are collected through official **air quality monitoring stations** managed by national environmental authorities. The values are compiled and standardized by the **European Environment Agency (EEA)**. All data are obtained from administrative or sensor-based sources, not from individuals or surveys.
+
+#### **2. Mortality Dataset (df_mortality_raw)**
+
+[The mortality data set contains](https://ec.europa.eu/eurostat/databrowser/view/sdg_11_52/default/table) health outcome estimates related to air pollution exposure. It presents the number of premature deaths attributable to PM2.5 per country and year, based on modelled estimates.
+
+**Key variables include:**
+
+-   **TIME**: Country name.
+
+-   **Year columns (e.g., 2016–2021)**: Each year column represents the total number of estimated premature deaths for that country and year.
+
+**Data source and collection method:**\
+This data set originates from the United Nations Sustainable Development Goals (SDG) indicator database, specifically SDG 11.6.2. The figures are not directly observed but are produced using statistical models that combine environmental exposure, population demographics, and epidemiological data. As such, these are administrative and model-based estimates, not derived from individual-level surveys or medical records.
 
 # Part 3 - Quantifying
 
@@ -163,32 +176,78 @@ Think of things like:
 Say we want to include only larger distances (above 2) in our dataset, we can filter for this.
 
 ```{r data_cleaning}
+# Add Region
+all_data_east$Region <- "East"
+all_data_west$Region <- "West"
 
+# Ensure both have 'Threshold.1' column
+if (!"Threshold.1" %in% colnames(all_data_east)) {
+  all_data_east$Threshold.1 <- NA_character_
+}
+if (!"Threshold.1" %in% colnames(all_data_west)) {
+  all_data_west$Threshold.1 <- NA_character_
+}
+
+# Force 'Threshold.1' to character in both
+all_data_east$Threshold.1 <- as.character(all_data_east$Threshold.1)
+all_data_west$Threshold.1 <- as.character(all_data_west$Threshold.1)
+
+# Align both datasets to shared columns
+common_cols <- intersect(names(all_data_east), names(all_data_west))
+all_data_east <- all_data_east[, common_cols]
+all_data_west <- all_data_west[, common_cols]
 
 ```
 
 Please use a separate 'R block' of code for each type of cleaning. So, e.g. one for missing values, a new one for removing unnecessary variables etc.
 
-### Merging
+#### Merging
 
 ```{r}
-# Combine all datasets
-all_data <- bind_rows(
-  data_2018, data_2019, data_2020,
-  data_2021, data_2022, data_2023
-)
+# Combine
+combined_data <- bind_rows(all_data_east, all_data_west)
+```
 
-# Combine all years
-all_data_west <- bind_rows(
-  data_2018, data_2019, data_2020,
-  data_2021, data_2022, data_2023
-)
+## Data cleaning
 
-# Save the combined dataset
-write.csv(all_data, "~/Documents/GitHub/PM2.5//All_Years_East_Combined.csv", row.names = FALSE)
+```{r}
+library(janitor)
+df_combined_clean <- combined_data %>%
+  clean_names() %>%
+  mutate(across(where(is.character), str_trim)) %>%
+  mutate(across(where(is.character), ~na_if(., "")))
 
-# Save the combined West Europe dataset
-write.csv(all_data_west, "~/Documents/GitHub/PM2.5/All_Years_Combined_West.csv", row.names = FALSE)
+message("Cleaned Combined dataset: ", nrow(df_combined_clean), " rows × ", ncol(df_combined_clean), " columns")
+
+
+```
+
+## Data cleaning (average of cities PM2.5)
+
+```{r}
+# Compute average PM2.5 by country, region, and year
+avg_pm25_by_country_year <- df_combined_clean %>%
+  group_by(country, region, year_of_statistics) %>%
+  summarise(average_pm25 = mean(air_pollution_level, na.rm = TRUE), .groups = "drop") %>%
+  arrange(year_of_statistics, region, country)
+
+```
+
+## Data cleaning (mortality)
+
+```{r}
+df_mortality_clean <- df_mortality_raw %>%
+  rename(country = TIME) %>%
+  pivot_longer(
+    cols = -country,
+    names_to = "year_of_statistics",
+    values_to = "premature_deaths",
+    values_drop_na = TRUE
+  ) %>%
+  mutate(
+    year_of_statistics = as.integer(year_of_statistics),
+    premature_deaths = as.numeric(premature_deaths)
+  )
 
 ```
 
@@ -203,6 +262,14 @@ Variable 1
 Variable 2
 
 ```{r gen_var2}
+
+```
+
+### Merging final
+
+```{r}
+merged_data <- full_join(df_mortality_clean, avg_pm25_by_country_year, by = c("year_of_statistics", "country")
+)
 
 ```
 
