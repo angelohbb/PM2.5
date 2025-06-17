@@ -8,9 +8,9 @@ output: pdf_document
 # Set-up your environment
 
 ```{r package_install, include=FALSE}
-install.packages("tidyverse")
-install.packages("yaml")
-install.packages("rmarkdown")
+#install.packages("tidyverse")
+#install.packages("yaml")
+#install.packages("rmarkdown")
 ```
 
 ```{r packages}
@@ -21,7 +21,7 @@ require(yaml)
 
 # Title Page
 
-Include your names
+Jusab Aziz, Angelo Habib, Abba Ayad
 
 Include the tutorial group number
 
@@ -46,7 +46,7 @@ Include the following:
 Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
 
 ```{r loading_data}
-dataset <- midwest
+
 ```
 
 midwest is an example dataset included in the tidyverse package
