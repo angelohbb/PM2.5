@@ -1,5 +1,5 @@
 ---
-title: "Template"
+title: "PM2.5 East and West Europe"
 author: "Studentnames and studentnumbers here"
 date: "`r Sys.Date()`"
 output: pdf_document
