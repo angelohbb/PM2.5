@@ -266,27 +266,129 @@ merged_data <- full_join(df_mortality_clean, avg_pm25_by_country_year, by = c("y
 
 ```
 
-Variable 1
+**Merging to get the filtered data to use further**
+
+```{r}
+merged_data$premature_deaths <- as.numeric(gsub(",", "", merged_data$premature_deaths))
+filtered_data <- merged_data %>%
+  filter(!is.na(premature_deaths), !is.na(average_pm25))
+countries_with_data <- unique(filtered_data$country)
+```
+
+Variable 1: Population
 
 ```{r gen_var1}
+population_region_df <- tibble::tibble(
+  country = c(
+    "Austria", "Belgium", "Bulgaria", "Estonia", "France", "Germany", "Hungary",
+    "Ireland", "Latvia", "Lithuania", "Luxembourg", "Netherlands", "Poland",
+    "Romania", "Slovakia", "Slovenia"
+  ),
+  population = c(
+    9, 11.5, 6.5, 1.3, 67, 83, 9.6, 5.1, 1.9, 2.8, 0.65, 17, 38, 19, 5.4, 2.1
+  ) * 1e6,
+  region = c(
+    "Western", "Western", "Eastern", "Eastern", "Western", "Western", "Eastern",
+    "Western", "Eastern", "Eastern", "Western", "Western", "Eastern", "Eastern",
+    "Eastern", "Eastern")
+
+)
 
 ```
 
-Variable 2
+Variable 2: Average deaths
 
 ```{r gen_var2}
+avg_deaths <- filtered_data %>%
+  group_by(country) %>%
+  summarise(avg_deaths = mean(premature_deaths, na.rm = TRUE)) %>%
+  inner_join(population_region_df, by = "country") %>%
+  mutate(
+    deaths_per_100k = (avg_deaths / population) * 100000
+  )
+```
 
+Variable 3: deaths per 100.000 people
+
+```{r gen_var3}
+region_summary <- avg_deaths %>%
+  group_by(region) %>%
+  summarise(
+    avg_deaths_per_100k = mean(deaths_per_100k),
+    .groups = "drop"
+  ) %>%
+  mutate(region = fct_reorder(region, avg_deaths_per_100k))
 ```
 
 ## 3.3 Visualize temporal variation
 
 ```{r}
+pm25_trend <- merged_data %>%
+  filter(!is.na(average_pm25), !is.na(year_of_statistics)) %>%
+  group_by(year_of_statistics) %>%
+  summarise(avg_pm25 = mean(average_pm25, na.rm = TRUE)) %>%
+  ungroup()
 
+# Plot
+ggplot(pm25_trend, aes(x = year_of_statistics, y = avg_pm25)) +
+  geom_line(color = "steelblue", size = 1.2) +
+  geom_point(color = "steelblue", size = 3) +
+  geom_text(aes(label = round(avg_pm25, 2)), vjust = -0.8, size = 3.5, fontface = "bold") +
+  theme_minimal(base_size = 13) +
+  labs(
+    title = "Average PM2.5 Over Time in Europe",
+    x = "Year",
+    y = "Average PM2.5 (µg/m³)"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15, hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
 ```
 
 ## 3.4 Visualize spatial variation
 
 ```{r visualise_map}
+merged_data$Premature_deaths <- as.numeric(gsub(",", "", MergedData$Premature_deaths))
+spatial_data <- merged_data %>%
+  filter(!is.na(Premature_deaths), !is.na(average_pm25)) %>%
+  group_by(country) %>%
+  summarise(
+    avg_pm25 = mean(average_pm25, na.rm = TRUE),
+    avg_deaths = mean(Premature_deaths, na.rm = TRUE)
+  )
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Merge map with your country-level data
+map_data <- left_join(world, spatial_data, by = c("name" = "country"))
+
+# Optional: Keep only Europe for clarity
+map_data <- map_data %>% filter(region_un == "Europe")
+ggplot(map_data) +
+  geom_sf(aes(fill = avg_pm25), color = "white", size = 0.2) +
+  scale_fill_gradient(
+    low = "#c6dbef",
+    high = "#08306b",
+    na.value = "lightgrey"
+  ) +
+  labs(
+    title = "Spatial Variation of Average PM2.5 in Europe",
+    subtitle = "Darker colors indicate higher pollution levels",
+    fill = "Avg PM2.5 (µg/m³)",
+    caption = "Countries with missing data are shown in grey."
+  ) +
+  coord_sf(
+    xlim = c(-15, 35),
+    ylim = c(35, 60),
+    expand = FALSE
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    legend.title = element_text(size = 11),
+    legend.text = element_text(size = 10)
+  )
 
 ```
 
@@ -297,18 +399,21 @@ Here you provide a description of why the plot above is relevant to your specifi
 What is the poverty rate by state?
 
 ```{r visualise_subpopulations}
-dataset$inmetro <- dataset$inmetro %>% as.factor()
-# Boxplot of poverty rate by state using the 'midwest' dataset
-ggplot(dataset, aes(x = inmetro, y = percadultpoverty)) +
-  geom_boxplot() +
+ggplot(region_summary, aes(x = region, y = avg_deaths_per_100k, fill = region)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(values = c("Western" = "steelblue", "Eastern" = "tomato")) +
   labs(
-    title = "Distribution of Poverty Rates by Metropolitan status (Midwest counties)",
-    x = "Metropolitan Area",
-    y = "Poverty Rate of Adults (%)"
+    title = "PM2.5-Related Premature Deaths per 100,000 People",
+    subtitle = "Western vs Eastern Europe",
+    x = "Region",
+    y = "Deaths per 100,000",
+    fill = "Region"
   ) +
   theme_minimal() +
   theme(
-    legend.position = "right"
+    plot.title = element_text(size = 14, face = "bold"),
+    axis.text.y = element_text(size = 10)
   )
 ```
 

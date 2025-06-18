@@ -14,7 +14,7 @@ library(forcats)
 # ----------------------------------------
 # STEP 2: Load and clean your dataset
 # ----------------------------------------
-MergedData <- read_csv("/Users/angelohabib/Documents/GitHub/PM2.5/MergedData.csv")
+MergedData <- read_csv("Documents/GitHub/PM2.5/MergedData.csv")
 
 # Clean numeric column (remove commas just in case)
 MergedData$premature_deaths <- as.numeric(gsub(",", "", MergedData$premature_deaths))
@@ -27,6 +27,7 @@ filtered_data <- MergedData %>%
 # STEP 3: List of countries with data
 # ----------------------------------------
 countries_with_data <- unique(filtered_data$country)
+
 
 # ----------------------------------------
 # STEP 4: Add population and region for those countries

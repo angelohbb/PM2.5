@@ -7,7 +7,7 @@ library(readr)
 library(dplyr)
 
 # 3. Load and clean data
-df <- read_csv("/Users/angelohabib/Desktop/Programming PM2_5/MergedData.csv")
+df <- read_csv("Documents/Github/PM2.5/MergedData.csv")
 df$average_pm25 <- as.numeric(df$average_pm25)
 df_clean <- na.omit(df)
 
@@ -32,3 +32,5 @@ ggplot(pm25_trend, aes(x = year_of_statistics, y = avg_pm25)) +
     plot.title = element_text(face = "bold", size = 15, hjust = 0.5),
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
+
+
