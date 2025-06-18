@@ -103,6 +103,14 @@ df_mortality_raw <- read_excel(mortality_excel_path, skip = 9)
 
 ```
 
+**The countries we use for east are:**
+
+Bulgaria, Estonia, Hungary, Latvia, Lithuania, Poland, Romania, Slovakia, Slovenia
+
+**The countries we use for east are:**
+
+Austria, Belgium, France, Germany, Ireland, Luxembourg, Netherlands
+
 ### Merging
 
 ```{r}
@@ -173,8 +181,6 @@ This data set originates from the United Nations Sustainable Development Goals (
 
 ## 3.1 Data cleaning
 
-Say we want to include only larger distances (above 2) in our dataset, we can filter for this.
-
 ```{r data_cleaning}
 # Add Region
 all_data_east$Region <- "East"
@@ -211,14 +217,13 @@ combined_data <- bind_rows(all_data_east, all_data_west)
 ## Data cleaning
 
 ```{r}
-library(janitor)
 df_combined_clean <- combined_data %>%
   clean_names() %>%
   mutate(across(where(is.character), str_trim)) %>%
-  mutate(across(where(is.character), ~na_if(., "")))
-
-message("Cleaned Combined dataset: ", nrow(df_combined_clean), " rows × ", ncol(df_combined_clean), " columns")
-
+  mutate(across(where(is.character), ~na_if(., ""))) %>%
+  filter(!if_all(everything(), is.na)) %>%                  
+  filter(!is.na(country)) %>%                               
+  filter(!grepl("^PM2.5", country))                         
 
 ```
 
@@ -253,6 +258,14 @@ df_mortality_clean <- df_mortality_raw %>%
 
 ## 3.2 Generate necessary variables
 
+### Merging final
+
+```{r}
+merged_data <- full_join(df_mortality_clean, avg_pm25_by_country_year, by = c("year_of_statistics", "country")
+)
+
+```
+
 Variable 1
 
 ```{r gen_var1}
@@ -262,14 +275,6 @@ Variable 1
 Variable 2
 
 ```{r gen_var2}
-
-```
-
-### Merging final
-
-```{r}
-merged_data <- full_join(df_mortality_clean, avg_pm25_by_country_year, by = c("year_of_statistics", "country")
-)
 
 ```
 
