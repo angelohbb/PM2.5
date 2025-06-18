@@ -33,11 +33,15 @@ Use APA referencing throughout your document. [Here's a link to some explanation
 
 ## 1.1 Describe the Social Problem
 
-Include the following:
+Air pollution is still one of the biggest environmental risk to human health, especially in the context of urban areas across Europe. Fine particulate matter—PM2.5, has been singled out as a significant higher threat and will be given the most attention. PM2.5 particles are defined as airborne particles with diameters less than 2.5 micrometers, and are also small enough to penetrate into the lungs and even into the bloodstream. Long-term exposure to PM2.5 is also related with numerous chronic health conditions, including asthma, lung cancers, cardiovascular disease, and premature death (World Health Organization [WHO], 2024). The WHO too, reinforce that there is no safe level of PM2.5 exposure, especially for the sensitive sub-populations such as children, the elderly, and individuals with pre-existing health conditions.
 
--   Why is this relevant?
+In European Union, diverse air quality is seen by regions, and PM2.5 remains an air quality concern in the EU overall even though environmental governance in the EU has improved. The European Environment Agency (EEA) stated that while Western Europe has made substantial advancements in emissions reduction, Eastern European countries still exhibit high PM2.5 levels due to high coal use in heating systems, high industrial activity, and inefficient enforcement (EEA, 2024). The EEA’s air quality dashboards show that most of Eastern Europe exceeds WHO's annual PM2.5 standard.
 
--   ...
+This division is substantiated through Eurostat data on urban population exposure to air pollution by PM2.5 across the EU member states. Eurostat shows that people in Eastern European countries are exposed to concentrations of PM2.5 that are substantially higher on average than their counterparts in the West (Eurostat, 2024). These sustainability concerns and inequalities raise additional questions about environmental inequalities and the unequal distribution of the health risks of air pollution.
+
+In this research study, we are focusing on understanding the health consequences of PM2.5 by looking at differences in mortality rates caused by PM2.5 pollution in Eastern and Western Europe. We had two major sources of data. First, the PM2.5 concentrations based on averages from urban stations across each of the countries in Europe from Eurostat. We cleaned and aggregated this data to find an average per country to make the comparisons more reliable. Second, death statistics published by the EEA looked at death figures per country that were linked to PM2.5 exposure. We used these figures, and divided the deaths per country by the population, calculating deaths per 100,000 people to normalize for population.
+
+In aggregating these sources, we attempt to paint a clearer picture of the impact PM2.5 pollution has on public health across Europe. The juxtaposition of Eastern and Western Europe highlights variability not only in air quality but also on the environmental outcomes that may result in more equal and/or effective policy decisions. In light of the WHO's strict health-based guidelines, these findings justify the continuation of regional (or even local) air pollution reduction initiatives that advocate for health protection policies in the European region.
 
 # Part 2 - Data Sourcing
 
@@ -346,6 +350,10 @@ ggplot(pm25_trend, aes(x = year_of_statistics, y = avg_pm25)) +
   )
 ```
 
+The plot shows average PM2.5 concentrations in Europe from 2018 to 2022. PM2.5 is fine particulate matter that can pose health risks when above dangerous levels. The average concentration was 14.17 µg/m³ in 2018, the highest point in the time series dataset. The concentrations dropped sharply in the following two years, to 12.1 µg/m³ in 2019, and 10.94 µg/m³ in 2020. The significant decline of PM2.5 for the year 2020 may be attributed to the COVID-19 pandemic lockdowns and lower industrial outputs.
+
+In 2021, average PM2.5 concentrations rose slightly to 11.56 µg/m³, perhaps because of renewed economic and social activities. In 2022, PM2.5 concentrations declined again to 11.06 µg/m³, while remaining slightly above the 2020 low average PM2.5 concentrations. In summary, the data trend indicates a general decline of PM2.5 pollution for the time series data, with a slight increase for the year 2021 due to temporary changes in human activity.
+
 ## 3.4 Visualize spatial variation
 
 ```{r visualise_map}
@@ -392,7 +400,9 @@ ggplot(map_data) +
 
 ```
 
-Here you provide a description of why the plot above is relevant to your specific social problem.
+The code produces a choropleth map that shows the spatial pattern of average PM2.5 concentrations in Europe. Specifically, the countries in which the shading represents the average PM2.5 concentration, shading mean that higher PM2.5 concentrations appear in darker shades of blue, while lower concentrations appear in lighter shades of blue. Countries with no data appear in grey.
+
+The map visually captures the regionalization of air concentrations. For example, if particular areas of Eastern or Southern Europe are shaded darker than the rest of Europe, then these areas have a higher average PM2.5 concentrations than elsewhere in Europe. This exercise is important because it shows where the geographic hotspots for air pollution are in Europe, and it may determined whether targeted environmental, or public health policy will need to be enacted.
 
 ## 3.5 Visualize sub-population variation
 
@@ -417,7 +427,11 @@ ggplot(region_summary, aes(x = region, y = avg_deaths_per_100k, fill = region)) 
   )
 ```
 
-Here you provide a description of why the plot above is relevant to your specific social problem.
+The bar chart compares the total average rate of PM2.5-related premature deaths per 100,000 people in Western and Eastern Europe. The horizontal layout of the bar chart clearly shows that Eastern Europe had a much higher average rate of PM2.5-related premature deaths attributed to air pollution than Western Europe.
+
+More specifically, the rate of PM2.5-related premature deaths in Eastern Europe was over 80 per 100,000 while in Western Europe it was closer to 30 per 100,000. The greater number of PM2.5-related premature deaths in Eastern Europe compared to Western Europe is significant. One interpretation of this finding is that people in the Eastern part of Europe may be at increased risk to the health hazards of PM2.5 mortality, possibly due to living in a more polluted environment, a greater share of heavy economic activities, less stringent policies and regulations of air pollution, or differences in the regions’ healthcare systems and public health interventions.
+
+In conclusion, the bar chart highlights the very clear inter-regional inequality in health impacts from air pollution in Europe.
 
 ## 3.6 Event analysis
 
@@ -454,7 +468,11 @@ ggplot(pm25_event, aes(x = year_of_statistics, y = avg_pm25)) +
 
 ```
 
-Here you provide a description of why the plot above is relevant to your specific social problem.
+This plot visualizes the effect of the COVID-19 lockdown in 2020 on PM2.5 in Europe over 2018 - 2022. The dashed vertical red line is the year 2020 - when most of Europe had lockdowns and restrictions due to the pandemic.
+
+Before 2020, PM2.5 declined, from 14.17 µg/m³ in 2018 down to 12.1 µg/m³ in 2019. During 2020, however, it dropped sharply down to 10.94 µg/m³, the lowest measurement of the entire time frame, likely due to a simultaneous decline in transportation, industrial activity, and mobility during the lockdown. This provides strong visual proof of what is possible when humankind shifts its behavior (and economy!) on a wide scale, impacting the environment positively.
+
+In 2021, PM2.5 began to increase again to 11.56 µg/m³, indicating some normalization of activity and in 2022 PM2.5 dropped slightly to 11.06 µg/m³. Overall, the plot indicates a clear temporary environmental improvement related to the COVID-19 event, which was followed by a partial rebound.
 
 # Part 4 - Discussion
 
@@ -478,6 +496,14 @@ Provide the link to your PUBLIC repository here: ...
 
 ## 5.2 Reference list
 
-World Health Organization. (2021). Air pollution: Health impacts. <https://www.who.int/health-topics/air-pollution#tab=tab_1>
+European Environment Agency. (2024). *Air quality statistics dashboards*. <https://www.eea.europa.eu/en/analysis/maps-and-charts/air-quality-statistics-dashboards>
+
+Eurostat. (2024). *Urban population exposure to air pollution by particulate matter (PM2.5)*. <https://ec.europa.eu/eurostat/databrowser/view/sdg_11_52/default/table>
+
+World Health Organization. (2024). *Air pollution*. <https://www.who.int/health-topics/air-pollution#tab=tab_1>
+
+World Health Organization. (2021). *WHO global air quality guidelines: Particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide*. <https://www.who.int/publications/i/item/9789240034228>
+
+European Environment Agency. (2023). *Air quality in Europe — 2023 report*. <https://www.eea.europa.eu/publications/air-quality-in-europe-2023>
 
 \
