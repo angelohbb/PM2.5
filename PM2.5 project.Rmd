@@ -1,6 +1,6 @@
 ---
 title: "PM2.5 East and West Europe"
-author: "Jusab Aziz (2763065), Angelo Habib (2821154), Abba Ayad"
+author: "Jusab Aziz (2763065), Angelo Habib (2821154), Abba Ayad (2737337), Chaniro Kocuvie-Tay (2862242), Nasir Ali (2869537), Mikail Cörüz, Fatima Malik (2788224)"
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
@@ -25,7 +25,7 @@ require(sf)
 
 # Title Page
 
-Jusab Aziz, Angelo Habib, Abba Ayad
+Jusab Aziz, Angelo Habib, Abba Ayad, Chaniro Kocuvie-Tay, Nasir Ali, Mikail Cörüz, Fatima Malik
 
 Tutorial group 2
 
@@ -87,7 +87,7 @@ west_2021 <- read_tsv_utf16_west("2021 west.csv", 2021)
 west_2022 <- read_tsv_utf16_west("2022 west.csv", 2022)
 west_2023 <- read_tsv_utf16_west("2023 west.csv", 2023)
 
-mortality_excel_path <- path.expand("~/Documents/GitHub/PM2.5/sdg_11_52_page_spreadsheet-3.xlsx")
+mortality_excel_path <- path.expand("~/Documents/GitHub/PM2.5/data/sdg_11_52_page_spreadsheet-3.xlsx")
 
 df_mortality_raw <- read_excel(mortality_excel_path, skip = 9)
 ```
@@ -161,7 +161,7 @@ These data are collected through official **air quality monitoring stations** ma
 
 -   **TIME**: Country name.
 
--   **Year columns (e.g., 2016–2021)**: Each year column represents the total number of estimated premature deaths for that country and year.
+-   **Year columns**: Each year column represents the total number of estimated premature deaths for that country and year.
 
 **Data source and collection method:**\
 This data set originates from the United Nations Sustainable Development Goals (SDG) indicator database, specifically SDG 11.6.2. The figures are not directly observed but are produced using statistical models that combine environmental exposure, population demographics, and epidemiological data. As such, these are administrative and model-based estimates, not derived from individual-level surveys or medical records.
