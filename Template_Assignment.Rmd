@@ -33,7 +33,7 @@ Use APA referencing throughout your document. [Here's a link to some explanation
 
 ## 1.1 Describe the Social Problem
 
-Air pollution is still one of the biggest environmental risk to human health, especially in the context of urban areas across Europe. Fine particulate matter—PM2.5, has been singled out as a significant higher threat and will be given the most attention. PM2.5 particles are defined as airborne particles with diameters less than 2.5 micrometers, and are also small enough to penetrate into the lungs and even into the bloodstream. Long-term exposure to PM2.5 is also related with numerous chronic health conditions, including asthma, lung cancers, cardiovascular disease, and premature death (World Health Organization [WHO], 2024). The WHO too, reinforce that there is no safe level of PM2.5 exposure, especially for the sensitive sub-populations such as children, the elderly, and individuals with pre-existing health conditions.
+Air pollution is still one of the biggest environmental risk to human health, especially in the context of urban areas across Europe. Fine particulate matter PM2.5, has been singled out as a significant higher threat and will be given the most attention. PM2.5 particles are defined as airborne particles with diameters less than 2.5 micrometers, and are also small enough to penetrate into the lungs and even into the bloodstream. Long-term exposure to PM2.5 is also related with numerous chronic health conditions, including asthma, lung cancers, cardiovascular disease, and premature death (World Health Organization [WHO], 2024). The WHO too, reinforce that there is no safe level of PM2.5 exposure, especially for the sensitive sub-populations such as children, the elderly, and individuals with pre-existing health conditions.
 
 In European Union, diverse air quality is seen by regions, and PM2.5 remains an air quality concern in the EU overall even though environmental governance in the EU has improved. The European Environment Agency (EEA) stated that while Western Europe has made substantial advancements in emissions reduction, Eastern European countries still exhibit high PM2.5 levels due to high coal use in heating systems, high industrial activity, and inefficient enforcement (EEA, 2024). The EEA’s air quality dashboards show that most of Eastern Europe exceeds WHO's annual PM2.5 standard.
 
@@ -357,13 +357,13 @@ In 2021, average PM2.5 concentrations rose slightly to 11.56 µg/m³, perhaps be
 ## 3.4 Visualize spatial variation
 
 ```{r visualise_map}
-merged_data$Premature_deaths <- as.numeric(gsub(",", "", MergedData$Premature_deaths))
+merged_data$premature_deaths <- as.numeric(gsub(",", "", merged_data$premature_deaths))
 spatial_data <- merged_data %>%
-  filter(!is.na(Premature_deaths), !is.na(average_pm25)) %>%
+  filter(!is.na(premature_deaths), !is.na(average_pm25)) %>%
   group_by(country) %>%
   summarise(
     avg_pm25 = mean(average_pm25, na.rm = TRUE),
-    avg_deaths = mean(Premature_deaths, na.rm = TRUE)
+    avg_deaths = mean(premature_deaths, na.rm = TRUE)
   )
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
