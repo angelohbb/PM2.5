@@ -22,8 +22,8 @@ pm25_event <- df_clean %>%
 
 # 6. Plot: PM2.5 over time with COVID-19 lockdown marker
 ggplot(pm25_event, aes(x = year_of_statistics, y = avg_pm25)) +
-  geom_line(color = "darkgreen", size = 1.2) +
-  geom_point(color = "darkgreen", size = 3) +
+  geom_line(color = "steelblue", size = 1.2) +
+  geom_point(color = "steelblue", size = 3) +
   geom_vline(xintercept = event_year, linetype = "dashed", color = "red", size = 1) +
   annotate("text", x = event_year + 0.3, y = max(pm25_event$avg_pm25), 
            label = "2020 COVID-19 Lockdown", color = "red", fontface = "bold", angle = 90, hjust = -0.1) +

@@ -7,24 +7,31 @@ output: pdf_document
 
 # Set-up your environment
 
-```{r packages}
+```{r package_install, include=FALSE}
+#install.packages("tidyverse")
+#install.packages("yaml")
+#install.packages("rmarkdown")
+```
+
+```{r packages, include=FALSE}
 require(tidyverse)
 require(rmarkdown)
 require(yaml)
-require()
+require(janitor)
+require(rnaturalearth)
+require(rnaturalearthdata)
+require(sf)
 ```
 
 # Title Page
 
 Jusab Aziz, Angelo Habib, Abba Ayad
 
-Include the tutorial group number
+Tutorial group 2
 
-Include your tutorial lecturer's name
+Chantal Schouwenaar
 
 # Part 1 - Identify a Social Problem
-
-Use APA referencing throughout your document. [Here's a link to some explanation.](https://www.mendeley.com/guides/apa-citation-guide/)
 
 ## 1.1 Describe the Social Problem
 
@@ -42,18 +49,12 @@ In aggregating these sources, we attempt to paint a clearer picture of the impac
 
 ## 2.1 Load in the data
 
-Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
-
 ```{r loading_data, include=FALSE}
-# STEP 2.1 — Load in the Starting Data
 
 # Load required packages
 library(dplyr)
 library(readxl)
 
-# ----------------------------
-# Load East Europe Data
-# ----------------------------
 east_base_path <- "~/Documents/GitHub/PM2.5/data/east europe data/"
 
 read_tsv_utf16_east <- function(filename, year) {
@@ -61,8 +62,7 @@ read_tsv_utf16_east <- function(filename, year) {
   df <- read.delim(path, fileEncoding = "UTF-16LE", sep = "\t", check.names = TRUE)
   df$Year <- year
   df <- df[, !duplicated(names(df))]  # remove duplicated columns
-  return(df)
-}
+  return(df)}
 
 east_2018 <- read_tsv_utf16_east("2018.csv", 2018)
 east_2019 <- read_tsv_utf16_east("2019.csv", 2019)
@@ -71,10 +71,6 @@ east_2021 <- read_tsv_utf16_east("2021.csv", 2021)
 east_2022 <- read_tsv_utf16_east("2022.csv", 2022)
 east_2023 <- read_tsv_utf16_east("2023.csv", 2023)
 
-
-# ----------------------------
-# Load West Europe Data
-# ----------------------------
 west_base_path <- "~/Documents/GitHub/PM2.5/data/west europe data/"
 
 read_tsv_utf16_west <- function(filename, year) {
@@ -82,8 +78,7 @@ read_tsv_utf16_west <- function(filename, year) {
   df <- read.delim(path, fileEncoding = "UTF-16LE", sep = "\t", check.names = TRUE)
   df$Year <- year
   df <- df[, !duplicated(names(df))]
-  return(df)
-}
+  return(df)}
 
 west_2018 <- read_tsv_utf16_west("2018 west.csv", 2018)
 west_2019 <- read_tsv_utf16_west("2019 west.csv", 2019)
@@ -92,48 +87,43 @@ west_2021 <- read_tsv_utf16_west("2021 west.csv", 2021)
 west_2022 <- read_tsv_utf16_west("2022 west.csv", 2022)
 west_2023 <- read_tsv_utf16_west("2023 west.csv", 2023)
 
-
-# ----------------------------
-# Load Mortality (Premature Deaths) Dataset
-# ----------------------------
 mortality_excel_path <- path.expand("~/Documents/GitHub/PM2.5/sdg_11_52_page_spreadsheet-3.xlsx")
 
 df_mortality_raw <- read_excel(mortality_excel_path, skip = 9)
-
 ```
 
-**The countries we use for east are:**
+**The countries we use for East are:**
 
 Bulgaria, Estonia, Hungary, Latvia, Lithuania, Poland, Romania, Slovakia, Slovenia
 
-**The countries we use for east are:**
+**The countries we use for West are:**
 
 Austria, Belgium, France, Germany, Ireland, Luxembourg, Netherlands
 
 ### Merging
 
+Here I will merge the two data sets that I have loaded in.
+
 ```{r}
-
-
 all_data_east <- bind_rows(
   east_2018, east_2019, east_2020,
-  east_2021, east_2022, east_2023
-)
+  east_2021, east_2022, east_2023)
+
 all_data_west <- bind_rows(
   west_2018, west_2019, west_2020,
-  west_2021, west_2022, west_2023
-)
-
+  west_2021, west_2022, west_2023)
 ```
 
 ## 2.2 Provide a short summary of the dataset(s)
 
-```{r}
+```{r include=FALSE}
 # Show structure of each raw dataset
 head(all_data_east)
 head(all_data_west)
-head(df_mortality_raw)
+```
 
+```{r}
+head(df_mortality_raw)
 ```
 
 The "all_data_east" and "all_data_west" datasets contain yearly air pollution data for each country. Each row represents one country in a specific year (from 2018 to 2023). The variables include PM2.5 concentration, number of monitoring stations, threshold exceedances, and other environmental indicators. A "Year" column was added manually to keep track of the time dimension.
@@ -180,7 +170,7 @@ This data set originates from the United Nations Sustainable Development Goals (
 
 ## 3.1 Data cleaning
 
-```{r data_cleaning}
+```{r data_cleaning, include=FALSE}
 # Add Region
 all_data_east$Region <- "East"
 all_data_west$Region <- "West"
@@ -192,21 +182,16 @@ if (!"Threshold.1" %in% colnames(all_data_east)) {
 if (!"Threshold.1" %in% colnames(all_data_west)) {
   all_data_west$Threshold.1 <- NA_character_
 }
-
 # Force 'Threshold.1' to character in both
 all_data_east$Threshold.1 <- as.character(all_data_east$Threshold.1)
 all_data_west$Threshold.1 <- as.character(all_data_west$Threshold.1)
-
 # Align both datasets to shared columns
 common_cols <- intersect(names(all_data_east), names(all_data_west))
 all_data_east <- all_data_east[, common_cols]
 all_data_west <- all_data_west[, common_cols]
-
 ```
 
-Please use a separate 'R block' of code for each type of cleaning. So, e.g. one for missing values, a new one for removing unnecessary variables etc.
-
-#### Merging
+### Merging
 
 ```{r}
 # Combine
@@ -215,7 +200,9 @@ combined_data <- bind_rows(all_data_east, all_data_west)
 
 ## Data cleaning
 
-```{r}
+Here I will data clean the combined data file because it included a lot of weird numbers and rows.
+
+```{r include=FALSE}
 df_combined_clean <- combined_data %>%
   clean_names() %>%
   mutate(across(where(is.character), str_trim)) %>%
@@ -223,7 +210,6 @@ df_combined_clean <- combined_data %>%
   filter(!if_all(everything(), is.na)) %>%                  
   filter(!is.na(country)) %>%                               
   filter(!grepl("^PM2.5", country))                         
-
 ```
 
 ## Data cleaning (average of cities PM2.5)
@@ -234,12 +220,13 @@ avg_pm25_by_country_year <- df_combined_clean %>%
   group_by(country, region, year_of_statistics) %>%
   summarise(average_pm25 = mean(air_pollution_level, na.rm = TRUE), .groups = "drop") %>%
   arrange(year_of_statistics, region, country)
-
 ```
 
 ## Data cleaning (mortality)
 
-```{r}
+Here I will data clean the mortality data file because it included a lot of weird numbers.
+
+```{r include=FALSE}
 df_mortality_clean <- df_mortality_raw %>%
   rename(country = TIME) %>%
   pivot_longer(
@@ -250,9 +237,7 @@ df_mortality_clean <- df_mortality_raw %>%
   ) %>%
   mutate(
     year_of_statistics = as.integer(year_of_statistics),
-    premature_deaths = as.numeric(premature_deaths)
-  )
-
+    premature_deaths = as.numeric(premature_deaths))
 ```
 
 ## 3.2 Generate necessary variables
@@ -260,9 +245,7 @@ df_mortality_clean <- df_mortality_raw %>%
 ### Merging final
 
 ```{r}
-merged_data <- full_join(df_mortality_clean, avg_pm25_by_country_year, by = c("year_of_statistics", "country")
-)
-
+merged_data <- full_join(df_mortality_clean, avg_pm25_by_country_year, by = c("year_of_statistics", "country"))
 ```
 
 **Merging to get the filtered data to use further**
@@ -289,10 +272,7 @@ population_region_df <- tibble::tibble(
   region = c(
     "Western", "Western", "Eastern", "Eastern", "Western", "Western", "Eastern",
     "Western", "Eastern", "Eastern", "Western", "Western", "Eastern", "Eastern",
-    "Eastern", "Eastern")
-
-)
-
+    "Eastern", "Eastern"))
 ```
 
 Variable 2: Average deaths
@@ -303,8 +283,7 @@ avg_deaths <- filtered_data %>%
   summarise(avg_deaths = mean(premature_deaths, na.rm = TRUE)) %>%
   inner_join(population_region_df, by = "country") %>%
   mutate(
-    deaths_per_100k = (avg_deaths / population) * 100000
-  )
+    deaths_per_100k = (avg_deaths / population) * 100000)
 ```
 
 Variable 3: deaths per 100.000 people
@@ -341,8 +320,7 @@ ggplot(pm25_trend, aes(x = year_of_statistics, y = avg_pm25)) +
   ) +
   theme(
     plot.title = element_text(face = "bold", size = 15, hjust = 0.5),
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  )
+    axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
 The plot shows average PM2.5 concentrations in Europe from 2018 to 2022. PM2.5 is fine particulate matter that can pose health risks when above dangerous levels. The average concentration was 14.17 µg/m³ in 2018, the highest point in the time series dataset. The concentrations dropped sharply in the following two years, to 12.1 µg/m³ in 2019, and 10.94 µg/m³ in 2020. The significant decline of PM2.5 for the year 2020 may be attributed to the COVID-19 pandemic lockdowns and lower industrial outputs.
@@ -351,7 +329,7 @@ In 2021, average PM2.5 concentrations rose slightly to 11.56 µg/m³, perhaps be
 
 ## 3.4 Visualize spatial variation
 
-```{r visualise_map}
+```{r visualise_map, echo=FALSE}
 merged_data$premature_deaths <- as.numeric(gsub(",", "", merged_data$premature_deaths))
 spatial_data <- merged_data %>%
   filter(!is.na(premature_deaths), !is.na(average_pm25)) %>%
@@ -390,9 +368,7 @@ ggplot(map_data) +
     plot.title = element_text(size = 16, face = "bold"),
     plot.subtitle = element_text(size = 12),
     legend.title = element_text(size = 11),
-    legend.text = element_text(size = 10)
-  )
-
+    legend.text = element_text(size = 10))
 ```
 
 The code produces a choropleth map that shows the spatial pattern of average PM2.5 concentrations in Europe. Specifically, the countries in which the shading represents the average PM2.5 concentration, shading mean that higher PM2.5 concentrations appear in darker shades of blue, while lower concentrations appear in lighter shades of blue. Countries with no data appear in grey.
@@ -418,8 +394,7 @@ ggplot(region_summary, aes(x = region, y = avg_deaths_per_100k, fill = region)) 
   theme_minimal() +
   theme(
     plot.title = element_text(size = 14, face = "bold"),
-    axis.text.y = element_text(size = 10)
-  )
+    axis.text.y = element_text(size = 10))
 ```
 
 The bar chart compares the total average rate of PM2.5-related premature deaths per 100,000 people in Western and Eastern Europe. The horizontal layout of the bar chart clearly shows that Eastern Europe had a much higher average rate of PM2.5-related premature deaths attributed to air pollution than Western Europe.
@@ -432,7 +407,7 @@ In conclusion, the bar chart highlights the very clear inter-regional inequality
 
 Analyze the relationship between two variables.
 
-```{r analysis}
+```{r analysis, echo=FALSE}
 event_year <- 2020
 
 # Aggregate average PM2.5 by year
@@ -458,9 +433,7 @@ ggplot(pm25_event, aes(x = year_of_statistics, y = avg_pm25)) +
   ) +
   theme(
     plot.title = element_text(face = "bold", size = 15, hjust = 0.5),
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  )
-
+    axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
 This plot visualizes the effect of the COVID-19 lockdown in 2020 on PM2.5 in Europe over 2018 - 2022. The dashed vertical red line is the year 2020 - when most of Europe had lockdowns and restrictions due to the pandemic.
