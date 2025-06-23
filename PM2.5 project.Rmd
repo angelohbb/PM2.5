@@ -1,6 +1,6 @@
 ---
 title: "PM2.5 East and West Europe"
-author: "Jusab Aziz (2763065), Angelo Habib (2821154), Abba Ayad (2737337), Chaniro Kocuvie-Tay (2862242), Nasir Ali (2869537), Mikail Cörüz, Fatima Malik (2788224)"
+author: "Jusab Aziz (2763065), Angelo Habib (2821154),Abba Ayad (2737337), Chaniro Kocuvi-Tay (2862242), Nasir Ali (2869537), Mikail Cörüz (), Fatima Malik (2788224)"
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
