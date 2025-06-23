@@ -35,9 +35,9 @@ Chantal Schouwenaar
 
 ## 1.1 Describe the Social Problem
 
-Air pollution is still one of the biggest environmental risk to human health, especially in the context of urban areas across Europe. Fine particulate matter PM2.5, has been singled out as a significant higher threat and will be given the most attention. PM2.5 particles are defined as airborne particles with diameters less than 2.5 micrometers, and are also small enough to penetrate into the lungs and even into the bloodstream. Long-term exposure to PM2.5 is also related with numerous chronic health conditions, including asthma, lung cancers, cardiovascular disease, and premature death (World Health Organization [WHO], 2024). The WHO too, reinforce that there is no safe level of PM2.5 exposure, especially for the sensitive sub-populations such as children, the elderly, and individuals with pre-existing health conditions.
+Air pollution is still one of the biggest environmental risk to human health, especially in the context of urban areas across Europe. Fine particulate matter (PM2.5), has been singled out as a significant higher threat and will be given the most attention. PM2.5 particles are defined as airborne particles with diameters less than 2.5 micrometers, and are also small enough to penetrate into the lungs and even into the bloodstream. Long-term exposure to PM2.5 is also associated with numerous chronic health conditions, including asthma, lung cancer, cardiovascular disease, and premature death. In this context, prematuredeaths refer to deaths that occur earlier than expected based on typical life expectancy, usually among adults aged 30 and older, due to prolonged exposure to air pollution (EEA, 2023; WHO, 2024).. The WHO too, reinforce that there is no safe level of PM2.5 exposure, especially for the sensitive sub-populations such as children, the elderly, and individuals with pre-existing health conditions.
 
-In European Union, diverse air quality is seen by regions, and PM2.5 remains an air quality concern in the EU overall even though environmental governance in the EU has improved. The European Environment Agency (EEA) stated that while Western Europe has made substantial advancements in emissions reduction, Eastern European countries still exhibit high PM2.5 levels due to high coal use in heating systems, high industrial activity, and inefficient enforcement (EEA, 2024). The EEA’s air quality dashboards show that most of Eastern Europe exceeds WHO's annual PM2.5 standard.
+In European Union, diverse air quality is seen by regions, and PM2.5 remains an air quality concern in the EU, overall even though environmental governance in the EU has improved. The European Environment Agency (EEA) stated that while Western Europe has made substantial advancements in emissions reduction, Eastern European countries still exhibit high PM2.5 levels due to high coal use in heating systems, high industrial activity, and inefficient enforcement (EEA, 2024). The EEA’s air quality dashboards show that most of Eastern Europe exceeds WHO's annual PM2.5 standard.
 
 This division is substantiated through Eurostat data on urban population exposure to air pollution by PM2.5 across the EU member states. Eurostat shows that people in Eastern European countries are exposed to concentrations of PM2.5 that are substantially higher on average than their counterparts in the West (Eurostat, 2024). These sustainability concerns and inequalities raise additional questions about environmental inequalities and the unequal distribution of the health risks of air pollution.
 
@@ -128,7 +128,7 @@ head(df_mortality_raw)
 
 The "all_data_east" and "all_data_west" datasets contain yearly air pollution data for each country. Each row represents one country in a specific year (from 2018 to 2023). The variables include PM2.5 concentration, number of monitoring stations, threshold exceedances, and other environmental indicators. A "Year" column was added manually to keep track of the time dimension.
 
-The "df_mortality_raw" dataset shows the estimated number of premature deaths attributed to PM2.5 pollution. It is structured in wide format, with countries in the rows and years (e.g., 2016–2021) as column headers. Each value represents the total number of premature deaths for that country in a given year.
+The "df_mortality_raw" dataset shows the estimated number of premature deaths attributed to PM2.5 pollution. It is structured in wide format, with countries in the rows and years (e.g., 2016–2022) as column headers. Each value represents the total number of premature deaths for that country in a given year.
 
 ## 2.3 Describe the type of variables included
 
@@ -151,7 +151,7 @@ The [air pollution datasets](https://www.eea.europa.eu/en/analysis/maps-and-char
 -   **Year**: The calendar year of the observation (manually added).
 
 **Data source and collection method:**\
-These data are collected through official **air quality monitoring stations** managed by national environmental authorities. The values are compiled and standardized by the **European Environment Agency (EEA)**. All data are obtained from administrative or sensor-based sources, not from individuals or surveys.
+These data are collected through official air quality monitoring stations managed by national environmental authorities. The values are compiled and standardized by the European Environment Agency (EEA). All data are obtained from administrative or sensor-based sources, not from individuals or surveys.
 
 #### **2. Mortality Dataset (df_mortality_raw)**
 
@@ -410,21 +410,30 @@ Analyze the relationship between two variables.
 ```{r analysis, echo=FALSE}
 event_year <- 2020
 
-# Aggregate average PM2.5 by year
 pm25_event <- merged_data %>%
   group_by(year_of_statistics) %>%
   summarise(avg_pm25 = mean(average_pm25, na.rm = TRUE)) %>%
   ungroup() %>%
-  filter(year_of_statistics >= 2018)  # ← restrict to 2018 and later
+  filter(year_of_statistics >= 2018)  # Restrict to 2018 and later
 
-# Plot: PM2.5 over time with COVID-19 lockdown marker
 ggplot(pm25_event, aes(x = year_of_statistics, y = avg_pm25)) +
   geom_line(color = "steelblue", size = 1.2) +
   geom_point(color = "steelblue", size = 3) +
+  
+
   geom_vline(xintercept = event_year, linetype = "dashed", color = "red", size = 1) +
-  annotate("text", x = event_year + 0.3, y = max(pm25_event$avg_pm25), 
-           label = "2020 COVID-19 Lockdown", color = "red", fontface = "bold", angle = 90, hjust = -0.1) +
+  
+  annotate("text",
+           x = event_year,
+           y = max(pm25_event$avg_pm25) + 0.5,
+           label = "COVID-19 Lockdown in 2020\nLed to a sharp drop in PM2.5 levels\ndue to reduced traffic & industry",
+           color = "red",
+           fontface = "bold",
+           hjust = 0.5,
+           size = 4.2) +
+
   geom_text(aes(label = round(avg_pm25, 2)), vjust = -0.8, size = 3.5, fontface = "bold") +
+  
   theme_minimal(base_size = 13) +
   labs(
     title = "Impact of COVID-19 Lockdown on PM2.5 Levels in Europe",
@@ -433,7 +442,9 @@ ggplot(pm25_event, aes(x = year_of_statistics, y = avg_pm25)) +
   ) +
   theme(
     plot.title = element_text(face = "bold", size = 15, hjust = 0.5),
-    axis.text.x = element_text(angle = 45, hjust = 1))
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
 ```
 
 This plot visualizes the effect of the COVID-19 lockdown in 2020 on PM2.5 in Europe over 2018 - 2022. The dashed vertical red line is the year 2020 - when most of Europe had lockdowns and restrictions due to the pandemic.
@@ -460,7 +471,7 @@ In conclusion, our findings support the idea that PM2.5 pollution is both an en
 
 ## 5.1 Github repository link
 
-Provide the link to your PUBLIC repository here: ...
+Provide the link to your PUBLIC repository here: <https://github.com/angelohbb/PM2.5>
 
 ## 5.2 Reference list
 
